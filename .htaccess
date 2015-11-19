@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteRule ^exhibitions/$ /exhibitions/exhibitions.php
+RewriteRule ^artists/$ /artists/artists.php 
+
+RewriteRule ^exhibitions.php$ /exhibitions/ [R=301]
+RewriteRule ^artists.php$ /artists/ [R=301]
