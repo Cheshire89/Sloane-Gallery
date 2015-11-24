@@ -1,0 +1,612 @@
+/*-----Start Sticky menu -------*/
+@font-face{
+	font-family:'Peignot Demi';
+	src:url(../fonts/Peignot%20Demi.ttf)
+	}
+
+.clearfix:before,
+.clearfix:after{
+	content: " ";
+	display:block;
+}
+.clearfix:after{
+	clear:both;
+}
+.clearfix {
+	*zoom:1;	
+}
+
+ .fixed {
+    background-color:#FFF !important;
+    position:fixed;
+    top:0;
+	left:0;
+	text-shadow:none;
+	width:100% !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+ }
+ 
+ .nav-
+/*-----End Sticky menu -------*/
+ .footer {
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:10px;
+    padding-bottom:10px;
+    min-height:10px;
+}
+.headerContainer {
+    margin-top:1%;
+    margin-bottom:1%;
+}
+.mobile_menu {
+    text-align: center;
+    overflow-x:hidden;
+    display:none;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:10px;
+    padding-bottom:10px;
+    min-height:10px;
+}
+.mobile_menu select {
+    width:80%;
+    padding:5px;
+    border:2px solid #D3D3D3;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.logo {
+    float: none;
+    border-bottom:1px solid;
+    background:no-repeat scroll;
+    margin-top:0;
+    margin-bottom:0;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:10px;
+    padding-bottom:10px;
+    min-height:10px;
+}
+.menu_unit_wrapper {
+    width: auto;
+    min-height: 46px;
+    float: none;
+}
+.logo_align {
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:10px;
+    padding-bottom:10px;
+    min-height:10px;
+}
+.menu {
+    overflow-x: hidden;
+    float:none;
+    width:auto;
+}
+.hmenubar1_list {
+    text-align: center;
+    font-size: 0px;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    display:none;
+    padding-top:0;
+    padding-bottom:0;
+    margin-top:0;
+    margin-bottom:0;
+    padding-right:0;
+    padding-left:0;
+    margin-right:0;
+    margin-left:0;
+}
+.hmenubar1_list li {
+    padding:0;
+    display: inline-block;
+    position: relative;
+    background: transparent;
+    margin-top:0;
+    margin-bottom:0;
+    margin-right:0px;
+    margin-left:0px;
+}
+.hmenubar1_list li a {
+    display: block;
+    padding: 12px 8px;
+    line-height: 20px;
+    font-weight: normal;
+    color: #FFF;
+    text-decoration: none;
+    text-transform: none;
+    text-align: center;
+    width: auto;
+    min-width: 77px;
+    height: auto;
+    font-size: 20px;
+    margin-top:0;
+    margin-bottom:0;
+    margin-right:auto;
+    margin-left:auto;
+}
+.footerContainer {
+    margin-bottom:1%;
+}
+.hmenubar1_list li a:hover {
+    color: #DFF2FF;
+}
+.hmenubar1_list li a:active {
+    color: #272727;
+    font-weight: bold;
+}
+.clearfix select {
+    display: inline-block;
+    margin-right:0px;
+    margin-left:0px;
+}
+.zeroMargin_mobile {
+    margin-left: 0;
+}
+img.image {
+    margin:2% auto 1% auto;
+    display:block;
+    height:auto;
+    width:auto;
+}
+.hmenubar_list {
+    text-align: center;
+    font-size: 0px;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    display:block;
+    padding-top:0;
+    padding-bottom:0;
+    margin-top:0;
+    margin-bottom:0;
+}
+.hmenubar_list li {
+    padding:0;
+    display: inline-block;
+    position: relative;
+    background: transparent;
+    margin-top:0;
+    margin-bottom:0;
+}
+.hmenubar_list li a {
+    display: block;
+    padding: 12px 5px;
+    text-decoration: none;
+    text-transform: none;
+    text-align: center;
+    width: auto;
+    min-width: 73px;
+    color: #999;
+    height: auto;
+    font:normal normal bold 20px/19px 'Peignot Demi';
+    margin-top:0;
+    margin-bottom:0;
+}
+.hmenubar_list li a:hover {
+    color: #333;
+}
+.hmenubar_list li a:active {
+    color: #EA2E49;
+}
+.hmenubar_list li a.clicked {
+    color: #EA2E49;
+    font-size:8px;
+}
+.clearfix {
+    width:auto;
+    text-align:center;
+    min-height:0;
+    display:block;
+}
+.hmenubar1_list {
+    text-align: center;
+    font-size: 0px;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    display:none;
+    padding-top:0;
+    padding-bottom:0;
+    margin-top:0;
+    margin-bottom:0;
+}
+.hmenubar1_list li {
+    padding:0;
+    display: inline-block;
+    position: relative;
+    background: transparent;
+    margin-top:0;
+    margin-bottom:0;
+}
+.hmenubar1_list li a {
+    display: block;
+    padding: 12px 10px;
+    text-decoration: none;
+    text-transform: none;
+    text-align: center;
+    width: auto;
+    min-width: 73px;
+    color: #000000;
+    height: auto;
+    font:normal normal bold 20px/19px Peignot Demi;
+    margin-top:0;
+    margin-bottom:0;
+    margin-left:auto;
+    margin-right:auto;
+}
+.hmenubar1_list li a:hover {
+    color: #333;
+}
+.hmenubar1_list li a:active {
+    color: #5F0202;
+}
+.hmenubar1_list li a.clicked {
+    color: #5F0202;
+    font-family:Peignot Demi, sans-serif;
+    font-size:20px;
+    margin-left:0px;
+    margin-right:0px;
+}
+.clearfix select {
+    display: inline-block;
+}
+.clearfix select {
+    width:80%;
+    padding:5px;
+    border:2px solid #D3D3D3;
+    display:inline-block;
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-left:auto;
+    margin-right:auto;
+}
+h2.title {
+    font-family:'peignot demi';
+    -webkit-transform:none;
+    -webkit-box-shadow:none;
+}
+h3.heading1 {
+    font-family: Peignot Demi, sans-serif;
+    color:#424242;
+}
+h3.heading2 {
+    font-family: Peignot Demi, sans-serif;
+    color:#424242;
+}
+.hmenubar select {
+    width:80%;
+    padding:5px;
+    border:2px solid #D3D3D3;
+    display:none;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+h3.title {
+    font-family: Peignot Demi, sans-serif;
+    color:#424242;
+}
+h2.heading {
+    font-family: Peignot Demi, sans-serif;
+    font-size:12px;
+    text-align:center;
+    width:80%;
+    margin:0;
+}
+.body {
+	margin:0;
+	padding:0;
+	clear:both;
+}
+.bodyContainer {
+    width:80%;
+	height:auto;
+    margin:0 auto;
+}
+@media only screen and (min-width : 641px) {
+    .header {
+        clear: both;
+        min-height: 143px;
+        width: 100%;
+        margin-left: auto;
+    }
+    .body {
+        clear: both;
+        min-height: 100px;
+    }
+    .bodyContainer {
+        clear: both;
+        min-height: 100px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .footer {
+        clear: both;
+        min-height: 53px;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .headerContainer {
+        min-height: 129px;
+        width: 97.75%;
+        padding-left: 1.1250%;
+        padding-right: 1.1250%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .mobile_menu {
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .mobile_menu select {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .logo {
+        clear: both;
+        min-height: 85px;
+        width: 100%;
+        margin-right: auto;
+        margin-left: 0.0000%;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .logo_align {
+        margin-left: auto;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .menu {
+        min-height: 43px;
+        clear: both;
+        width: auto;
+        float: none;
+        margin-left:0;
+    }
+    .footerContainer {
+        min-height: 38px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 78.6666%;
+        padding-left: 1.1250%;
+        padding-right: 1.1250%;
+    }
+    .hmenubar {
+        width: 134.4828%;
+        float: left;
+    }
+    .hmenubar_list {
+        list-style: none;
+        padding-right: 0;
+        padding-left: 0;
+        margin-right: 0;
+        margin-left: 0;
+        min-height: 104px;
+        text-align: center;
+    }
+    .hmenubar_list li {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .hmenubar_list li a {
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .hmenubar select {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    select ul {
+        list-style-type: none;
+        padding-left: 0px;
+    }
+    h2.heading {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .menu_unit_wrapper {
+        width: 100%;
+        min-height: 43px;
+        float: left;
+    }
+    .menu_align {
+    }
+    .clearfix select {
+        display: none;
+    }
+    .clearfix select {
+        display: none;
+    }
+    .clearfix select {
+        display: none;
+    }
+    .hmenubar1_list li.item {
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+    .clearfix select {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .clearfix {
+        text-align: center;
+    }
+    .hmenubar1_list {
+        list-style: none;
+        min-height: 43px;
+        display: block;
+        text-align: center;
+    }
+    .hmenubar1_list li {
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+    .hmenubar1_list li a {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hmenubar1_list {
+        display: block;
+        text-align: center;
+        width:80%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .hmenubar1_list li a {
+        text-align: center;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .hmenubar1_list li a.clicked {
+        margin-left: 0%;
+        margin-right: 0px;
+    }
+    #photos {
+        width: 80%;
+        display:block;
+    }
+}
+@media only screen and (min-width : 1024px) {
+    .headerContainer {
+        width: 78.6666%;
+        padding-left:0.6667%;
+        padding-right:0.6667%;
+        max-width:1232px;
+        min-height:129px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .logo {
+        clear: both;
+        min-height: 84px;
+        width: 100%;
+        float: left;
+        margin:0 0, auto;
+    }
+    .menu {
+        clear: both;
+        min-height: 31px;
+        width: auto;
+        float: none;
+    }
+    .hmenubar {
+        width: 100.0000%;
+        float: left;
+    }
+    .hmenubar_list {
+        min-height: 104px;
+    }
+    .footerContainer {
+        width: 78.6666%;
+        padding-left:0.6667%;
+        padding-right:0.6667%;
+        max-width:1232px;
+        min-height:38px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .zeroMargin_desktop {
+        margin-left: 0;
+    }
+    .footer {
+        width: auto;
+        min-height:53px;
+    }
+    .header {
+        min-height: 159px;
+        width:auto;
+        margin-left:0;
+    }
+    .body {
+        clear: both;
+        min-height: 100px;
+    }
+    .bodyContainer {
+        clear: both;
+        min-height: 100px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .logo_align {
+        margin-left: 0px;
+    }
+    .menu_unit_wrapper {
+        width: 100%;
+        min-height: 43px;
+        float: left;
+    }
+    .menu_align {
+        margin-left: 0px;
+    }
+    .mobile_menu {
+        display: none;
+    }
+    .contact_us_align {
+        margin-left: 0%;
+    }
+    .testimonial .quotation {
+        margin:1.12em 1.12em 1.12em auto;
+    }
+    .hmenubar_list li a {
+        margin-left: 20%;
+        margin-right:20%;
+    }
+    img.image {
+        margin-left: auto;
+        display:block;
+        margin-right:auto;
+    }
+    .hmenubar1_list li a {
+        margin-left: 0px;
+        margin-right:0px;
+        font-size:20px;
+        padding-left:8px;
+        padding-right:8px;
+    }
+    .hmenubar1_list li.item {
+        margin-right: 1%;
+        margin-left:1%;
+    }
+    .hmenubar1_list li {
+        margin-left: 1%;
+        margin-right:1%;
+    }
+    .hmenubar1_list li a.clicked {
+        font-size: 20px;
+        margin-left:0px;
+        margin-right:0px;
+        padding-left:8px;
+        padding-right:8px;
+    }
+    .hmenubar1_list {
+        text-align: center;
+        width:80%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    h2.heading {
+        width: 80%;
+        margin-left:auto;
+        margin-right:auto;
+        min-height:18px;
+    }
+    #photos {
+        width: 80%;
+        display:block;
+    }
+}
