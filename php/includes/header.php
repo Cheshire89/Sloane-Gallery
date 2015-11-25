@@ -10,13 +10,27 @@ $gallery = "Sloane Gallery";
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link href="/stylesheets/defult.css.css" rel="stylesheet" type="text/css" />
 <?php 
-      if($page == "index"){
-        echo '<link href="/stylesheets/index.css" rel="stylesheet" type="text/css" />'; // index style file
+      if($page == "index" || $page == "artists" || $page == "shows" 
+        || $page == "contact" || $page == "about"){
+        echo '<link href="/stylesheets/'.$page.'.css" rel="stylesheet" type="text/css" />'; // index style file
       }
+
+       echo '<style type="text/css">
+          html { 
+            background: url(/images/bg'.rand(1,4).'.jpg) no-repeat center center fixed; 
+            background-color: #d6d6d6;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+              }
+        </style>';
+
 ?>
   <script type="text/javascript" src="scripts/browser-compatibility.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script type="text/javascript" src="/scripts/sticky.js"></script>
+  
  </head>
  <body>
   <header class="header">
@@ -53,5 +67,6 @@ $gallery = "Sloane Gallery";
      </select>
      <script type="text/javascript" src="scripts/mobile_menu_selection.js"></script>
     </div>
+  
    </div>
   </header>

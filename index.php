@@ -8,8 +8,8 @@ include('/php/includes/listOfportraits.php');
    <div class="bodyContainer" id="photos">
       
       <?php 
-          foreach($listOfPortraits as $portrait){
-            $length = count($portrait);
+          foreach($listOfPortraits as $key => $portrait){
+            $length = count($listOfPortraits);
             $alt = substr($portrait, 8,$length-4);
             echo '<img src="'.$portrait.'" alt="'.$alt.'"/>';
           }

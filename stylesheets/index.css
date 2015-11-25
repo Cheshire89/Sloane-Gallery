@@ -17,19 +17,11 @@
     display: block; /* add */
     width: 100%;
     height: 100%;
-    margin: 1%;
     padding:0;
+    margin:0 0 2% 2%;
+    object-fit: cover;
 }
-.body {
-    margin:0;
-    padding:0;
-    clear:both;
-}
-.bodyContainer {
-    width:80%;
-    height:auto;
-    margin:0 auto;
-}
+
 /* CSS Document */
  @media (max-width: 1000px) {
     #photos {
