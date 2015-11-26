@@ -13,7 +13,7 @@ $gallery = "Sloane Gallery";
       if($page == "index" || $page == "artists" || $page == "shows" 
         || $page == "contact" || $page == "about"){
         echo '<link href="/stylesheets/'.$page.'.css" rel="stylesheet" type="text/css" />'; // index style file
-      }
+      } 
 
        echo '<style type="text/css">
           html { 
