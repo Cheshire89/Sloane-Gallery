@@ -1,5 +1,6 @@
 <?php 
 $page = "index";
+require_once('/php/includes/config.php');
 include('/php/includes/header.php');
 include('/php/includes/listOfportraits.php');
 ?>
