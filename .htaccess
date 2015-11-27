@@ -1,0 +1,9 @@
+AddType text/x-component .htc
+
+RewriteEngine On
+
+RewriteRule ^about/$ /about/about.php
+RewriteRule ^contact/$ /contact/contact.php
+RewriteRule ^shows/$ /shows/shows.php
+RewriteRule ^artists/$ /artists/artists.php 
+RewriteRule ^publications/$ /publications/publications.php 
