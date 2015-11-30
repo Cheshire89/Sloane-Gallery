@@ -28,27 +28,20 @@ include(ROOT_PATH.'php/includes/header.php');
 ?>
 <section class="body">
    <div class="bodyContainer">
-   <ul>
+    <div class="thumbHolder">
       <?php
       	foreach($artist as $work){
-      		echo "<li>";
-      		if(isset($work["title"])){
-      			echo $work["title"]." ";
-      		}
-      		if(isset($work["yearOfcreation"])){
-      			echo $work["yearOfcreation"]." ";
-      		}
-      		if(isset($work["media"])){
-      			echo $work["media"]." ";
-      		}
-      		if(isset($work["size"])){
-      			echo $work["size"]." in";
-      		}
-      		echo "</li>";
+        		echo '<div class="thumbs">';
+            //if(isset($work["img"])){
+              echo '<img src="img/placeholder.jpg" alt="'.$work["title"].'"/>';
+            //}
+        		if(isset($work["title"])){
+        			echo '<p>'.$work["title"].'</p>';
+        		}
+        		echo '</div>';
       	}
-
       ?>
-    </ul>
+    </div>
    </div>
 </section>
 
