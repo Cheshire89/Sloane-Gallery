@@ -16,11 +16,11 @@ $artists = $results -> fetchAll(PDO::FETCH_ASSOC);
 ?>
 <section class="body">
    <div class="bodyContainer">
-      <ul>
+      <ul class="list">
 	      <?php 
-	      		foreach($artists as $artist){
-	      		echo '<li><a href="artist.php? id='.$artist["artist_id"].'">'.$artist["artist_name"].'</a></li>'; 
-	      		}
+      		foreach($artists as $artist){
+      		echo '<li><a href="artist.php?id='.$artist["artist_id"].'">'.$artist["artist_name"].'</a></li>'; 
+      		}
 	      ?>
       </ul>
    </div>
