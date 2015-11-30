@@ -1,0 +1,33 @@
+.thumbHolder{
+	width:80%;
+	margin:0px auto;
+}
+
+.thumbs{
+	margin:5px;
+	float: left;
+	width: 200px;
+	height: 250px;
+}
+
+.thumbs img{
+	width: 200px;
+	height: 200px;
+}
+
+.thumbs a{
+
+}
+
+.thumbs a:hover{
+
+}
+
+.thumbs p{
+	font-family: 'Arial','Helvetica','sans-serif';
+	font-size: 14px;
+	text-align: center;
+	margin: 5px auto 3px auto;
+
+
+}
