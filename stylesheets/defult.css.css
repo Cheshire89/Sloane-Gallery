@@ -217,7 +217,11 @@ img.image {
 .hmenubar_list li a.clicked {
     color: #EA2E49;
     font-size:8px;
+}.hmenubar_list li a.active {
+    color: #EA2E49;
+    font-size:8px;
 }
+
 .clearfix {
     width:auto;
     text-align:center;
@@ -272,6 +276,16 @@ img.image {
     margin-left:0px;
     margin-right:0px;
 }
+
+.hmenubar1_list li a.active {
+    color: #5F0202;
+    font-family:peignot_demiregular, sans-serif;
+    font-size:20px;
+    margin-left:0px;
+    margin-right:0px;
+}
+
+
 .clearfix select {
     display: inline-block;
 }
@@ -498,6 +512,13 @@ h2.heading {
         margin-left: 0%;
         margin-right: 0px;
     }
+
+    .hmenubar1_list li a.active {
+        margin-left: 0%;
+        margin-right: 0px;
+    }
+
+
     #photos {
         width: 80%;
         display:block;
@@ -609,6 +630,14 @@ h2.heading {
         margin-right:1%;
     }
     .hmenubar1_list li a.clicked {
+        font-size: 20px;
+        margin-left:0px;
+        margin-right:0px;
+        padding-left:8px;
+        padding-right:8px;
+    }
+
+    .hmenubar1_list li a.active {
         font-size: 20px;
         margin-left:0px;
         margin-right:0px;

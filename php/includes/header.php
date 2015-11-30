@@ -51,7 +51,7 @@ include("config.php");
       <nav class="clearfix">
        <ul class="hmenubar1_list">
         
-        <li <?php if ($page == "artists" || $page == "artist"){echo'class="item"';} ?>><a <?php if ($page == "artists" || $page == "artist"){echo'class="clicked"';} ?> href="<?php echo BASE_URL;?>artists/">Artists</a></li>
+        <li <?php if ($page == "artists" || $page == "artist"){echo'class="item"';} ?>><a <?php if($page == "artists" || $page == "artist"){echo 'class="active"';} ?> href="<?php echo BASE_URL;?>artists/">Artists</a></li>
         <li <?php if ($page == "shows"){echo'class="item"';} ?>><a <?php if ($page == "shows"){echo'class="clicked"';} ?> href="<?php echo BASE_URL;?>shows/">Shows</a></li>
         <li <?php if ($page == "publications"){echo'class="item"';} ?>><a <?php if ($page == "publications"){echo'class="clicked"';} ?> href="<?php echo BASE_URL;?>publications/">Publications</a></li>
         <li <?php if ($page == "about"){echo'class="item"';} ?>><a <?php if ($page == "about"){echo'class="clicked"';} ?> href="<?php echo BASE_URL;?>about/">About</a></li>
