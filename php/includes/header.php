@@ -12,12 +12,13 @@ include("config.php");
     echo $gallery;
   } 
   ?></title>
+  <link href="<?php echo BASE_URL; ?>stylesheets/reset.css" rel="stylesheet" type="text/css" />
   <link href="<?php echo BASE_URL; ?>stylesheets/normalize.css" rel="stylesheet" type="text/css" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link href="<?php echo BASE_URL; ?>stylesheets/defult.css.css" rel="stylesheet" type="text/css" />
 <?php 
-      if($page == "index" || $page == "artists" || $page == "shows" 
+      if($page == "index" || $page == "artists" || $page == "artist" ||$page == "shows" 
         || $page == "contact" || $page == "about"){
         echo '<link href="'.BASE_URL.'stylesheets/'.$page.'.css" rel="stylesheet" type="text/css" />'; // index style file
       } 
@@ -50,7 +51,7 @@ include("config.php");
       <nav class="clearfix">
        <ul class="hmenubar1_list">
         
-        <li <?php if ($page == "artists"){echo'class="item"';} ?>><a <?php if ($page == "artists"){echo'class="clicked"';} ?> href="<?php echo BASE_URL;?>artists/">Artists</a></li>
+        <li <?php if ($page == "artists" || $page == "artist"){echo'class="item"';} ?>><a <?php if ($page == "artists" || $page == "artist"){echo'class="clicked"';} ?> href="<?php echo BASE_URL;?>artists/">Artists</a></li>
         <li <?php if ($page == "shows"){echo'class="item"';} ?>><a <?php if ($page == "shows"){echo'class="clicked"';} ?> href="<?php echo BASE_URL;?>shows/">Shows</a></li>
         <li <?php if ($page == "publications"){echo'class="item"';} ?>><a <?php if ($page == "publications"){echo'class="clicked"';} ?> href="<?php echo BASE_URL;?>publications/">Publications</a></li>
         <li <?php if ($page == "about"){echo'class="item"';} ?>><a <?php if ($page == "about"){echo'class="clicked"';} ?> href="<?php echo BASE_URL;?>about/">About</a></li>
@@ -60,7 +61,7 @@ include("config.php");
        <select>
         <option value="" selected="">MENU</option>
        </select>
-       <script type="text/javascript" src="scripts/menu_selection.js"></script>
+       <script type="text/javascript" src="<?php echo BASE_URL; ?>scripts/menu_selection.js"></script>
       </nav>
      </div>
     </div>
@@ -74,7 +75,7 @@ include("config.php");
       <option value="#">About</option>
       <option value="#">Contact</option>
      </select>
-     <script type="text/javascript" src="<?php echo BASE_URL; ?>scripts/mobile_menu_selection.js"></script>
+     <script type="text/javascript" src="<?php echo "../../"; ?>scripts/mobile_menu_selection.js"></script>
     </div>
   
    </div>
