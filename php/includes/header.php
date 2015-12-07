@@ -19,7 +19,7 @@ include("config.php");
   <link href="<?php echo BASE_URL; ?>stylesheets/defult.css.css" rel="stylesheet" type="text/css" />
 <?php 
       if($page == "index" || $page == "artists" || $page == "artist" ||$page == "shows" 
-        || $page == "contact" || $page == "about"){
+        || $page == "contact" || $page == "about" || $page == "work"){
         echo '<link href="'.BASE_URL.'stylesheets/'.$page.'.css" rel="stylesheet" type="text/css" />'; // index style file
       } 
 
@@ -38,6 +38,7 @@ include("config.php");
   <script type="text/javascript" src="<?php echo BASE_URL; ?>scripts/browser-compatibility.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script type="text/javascript" src="<?php echo BASE_URL; ?>scripts/sticky.js"></script>
+  <script type="text/javascript" src="<?php echo BASE_URL; ?>scripts/mouse_over.js"></script>
   
  </head>
  <body>

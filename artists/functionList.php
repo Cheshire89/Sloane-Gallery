@@ -1,4 +1,13 @@
 <?php 
+function setId(){
+	if(!empty($_GET['id'])){
+		$artist_id = intval($_GET['id']);
+		return $artist_id;
+	}else {
+		echo "<h3>The Id Could not be found. </h3>";
+	}
+}
+
 function initiateDb(){
 	try{
 	$db = new PDO('mysql:host=127.0.0.1; dbname=gallery_db','root','Sasha446');
@@ -10,16 +19,6 @@ function initiateDb(){
 
 	return $db;
 }
-
-function setId(){
-	if(!empty($_GET['id'])){
-		$artist_id = intval($_GET['id']);
-		return $artist_id;
-	}else {
-		echo "<h3>The Id Could not be found. </h3>";
-	}
-}
-
 
 function loadArtistWorks($sqlStr){
 	$db = initiateDb();	
