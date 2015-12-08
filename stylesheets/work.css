@@ -1,0 +1,20 @@
+.workContainer{
+	width: 80%;
+	margin:0 auto;
+	background-color: green;
+}
+
+.workAlign{
+	display: inline-block;
+	float: left;
+}
+#arrowL{
+	width: 50px;
+}
+
+#arrowR{
+	width: 50px;
+}
+#work{
+	margin:0 auto;
+}
