@@ -4,7 +4,7 @@ require_once($_SERVER["DOCUMENT_ROOT"]."/php/includes/config.php");
 include(ROOT_PATH.'php/includes/header.php');
 include('functionList.php');
 
-$artists = loadListOfArtists();
+$artists = loadListOfArtists('select * from artists order by artist_id');
 
 ?>
 <section class="body">

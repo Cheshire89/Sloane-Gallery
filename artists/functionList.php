@@ -1,13 +1,21 @@
 <?php 
-function setId(){
+function getId(){
 	if(!empty($_GET['id'])){
-		$artist_id = intval($_GET['id']);
-		return $artist_id;
+		$id = intval($_GET['id']);
+		return $id;
 	}else {
-		echo "<h3>The Id Could not be found. </h3>";
+		return "<h3>The Id Could not be found. </h3>";
 	}
 }
 
+function getArtistId(){
+	if(!empty($_GET['artistId'])){
+		$artist_id = intval($_GET['artistId']);
+		return $artist_id;
+	}else{
+		return "<h3>The Artist Id is not set. </h3>";
+	}
+}
 function initiateDb(){
 	try{
 	$db = new PDO('mysql:host=127.0.0.1; dbname=gallery_db','root','Sasha446');
@@ -23,7 +31,7 @@ function initiateDb(){
 function loadArtistWorks($sqlStr){
 	$db = initiateDb();	
 	
-	$artist_id = setId();
+	$artist_id = getId();
 
 	 try{
     $results = $db -> prepare($sqlStr);
@@ -45,11 +53,11 @@ function loadArtistWorks($sqlStr){
 return $artist;
 }
 
-function loadListOfArtists(){
+function loadListOfArtists($sqlStr){
 	$db = initiateDb();
 	
 	try{
-	$results = $db -> query('select * from artists order by artist_id');
+	$results = $db -> query($sqlStr);
 	} catch(Exception $e){
 	echo $e -> getMessage();
 	die();

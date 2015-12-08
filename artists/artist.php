@@ -1,11 +1,12 @@
 <?php
 $page = "artist";
 require_once($_SERVER["DOCUMENT_ROOT"]."/php/includes/config.php");
+include(ROOT_PATH.'php/includes/header.php');
 include('functionList.php');
 
 $artist = loadArtistWorks('select * from art_works where artist = ?');
+$artist_id = getId();
 
-include(ROOT_PATH.'php/includes/header.php');
 ?>
 <section class="body">
    <div class="bodyContainer">
@@ -14,7 +15,7 @@ include(ROOT_PATH.'php/includes/header.php');
       	foreach($artist as $work){
         		echo '<div class="thumbs">';
             //if(isset($work["img"])){
-              echo '<a href="work.php?id='.$work["work_id"].'"> 
+              echo '<a href="work.php?id='.$work["work_id"].'&artistId='.$artist_id.'"> 
               <img src="img/placeholder.jpg" alt="'.$work["title"].'"/></a>';
             //}
         		if(isset($work["title"])){
@@ -23,6 +24,8 @@ include(ROOT_PATH.'php/includes/header.php');
         		echo '</div>';
       	}
       ?>
+
+
     </div>
    </div>
 </section>
