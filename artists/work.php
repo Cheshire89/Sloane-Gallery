@@ -10,13 +10,15 @@ include(ROOT_PATH.'php/includes/header.php');
 ?>
 <section class="body">
    <div class="bodyContainer">
-    <div class="workContainer">
+    <div class="workContainer clearfix">
         <div class="workAlign" id="arrowL">
+        
         </div>
         <div class="workAlign" id="work">
         <img src="img/L_placeholder.jpg">
         </div>
         <div class="workAlign" id="arrowR">
+        <img src="img/arrowR.png">
         </div>
     </div>
    </div>
