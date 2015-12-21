@@ -7,7 +7,7 @@ include("config.php");
  <head>
   <title><?php 
   if(isset($title) == TRUE){
-    echo $gallery." | ".ucfirst($title);
+    echo ucfirst($title);
   } else {
     echo $gallery;
   } 
