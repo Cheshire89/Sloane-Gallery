@@ -1,10 +1,10 @@
 <?php 
-function getId(){
-	if(!empty($_GET['id'])){
-		$id = intval($_GET['id']);
+function getWorkId(){
+	if(!empty($_GET['workId'])){
+		$id = intval($_GET['workId']);
 		return $id;
 	}else {
-		return "<h3>The Id Could not be found. </h3>";
+		return "<h2>Work Id could not be found </h2><br/>";
 	}
 }
 
@@ -13,7 +13,7 @@ function getArtistId(){
 		$artist_id = intval($_GET['artistId']);
 		return $artist_id;
 	}else{
-		return "<h3>The Artist Id is not set. </h3>";
+		return "<h2>Artist with give id could not be found. </h2><br/>";
 	}
 }
 function initiateDb(){
@@ -28,14 +28,20 @@ function initiateDb(){
 	return $db;
 }
 
-function loadArtistWorks($sqlStr){
+function selectParamQuery($sqlStr){
 	$db = initiateDb();	
-	
-	$artist_id = getId();
 
-	 try{
+	$numOfParam = substr_count($sqlStr, '?');
+	$artistId = getArtistId();
+	$workId = getWorkId();
+	
+	try{
     $results = $db -> prepare($sqlStr);
-    $results -> bindParam(1,$artist_id); //#1 references the "?" and binds a variable to that "?"
+    if( intval($workId)){
+    $results -> bindParam(1,$workId);
+    } elseif (intval($artistId)) {
+    $results -> bindParam(1,$artistId);  	
+    } 
     $results -> execute();
     
     } catch (Exception $e){
@@ -53,7 +59,7 @@ function loadArtistWorks($sqlStr){
 return $artist;
 }
 
-function loadListOfArtists($sqlStr){
+function selectQuery($sqlStr){
 	$db = initiateDb();
 	
 	try{
