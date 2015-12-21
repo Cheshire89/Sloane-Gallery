@@ -1,22 +1,25 @@
 <?php
 $page = "artist";
-require_once($_SERVER["DOCUMENT_ROOT"]."/php/includes/config.php");
-include(ROOT_PATH.'php/includes/header.php');
 include('functionList.php');
+$artistWorks = selectParamQuery('select * from art_works where artist = ?');
+$artistName = selectParamQuery('select * from artists where artist_id = ?');
+$artist_id = getArtistId();
 
-$artist = loadArtistWorks('select * from art_works where artist = ?');
-$artist_id = getId();
+require_once($_SERVER["DOCUMENT_ROOT"]."/php/includes/config.php");
+$title = $artistName[0]["artist_name"];
+include(ROOT_PATH.'php/includes/header.php');
+
 
 ?>
 <section class="body">
    <div class="bodyContainer">
     <div class="thumbHolder">
       <?php
-      	foreach($artist as $work){
+      	foreach($artistWorks as $work){
         		echo '<div class="thumbs">';
             //if(isset($work["img"])){
-              echo '<a href="work.php?id='.$work["work_id"].'&artistId='.$artist_id.'"> 
-              <img src="img/placeholder.jpg" alt="'.$work["title"].'"/></a>';
+              echo '<a href="work.php?workId='.$work["work_id"].'&artistId='.$artist_id.'"> 
+              <img src="img/placeholder.jpg" alt='.$work["title"].'/></a>';
             //}
         		if(isset($work["title"])){
         			echo '<p>'.$work["title"].'</p>';
