@@ -6,8 +6,8 @@ include("config.php");
 <html xmlns="http://www.w3.org/1999/xhtml">
  <head>
   <title><?php 
-  if(isset($page) == TRUE){
-    echo $gallery." | ".ucfirst($page);
+  if(isset($title) == TRUE){
+    echo $gallery." | ".ucfirst($title);
   } else {
     echo $gallery;
   } 
