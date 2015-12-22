@@ -1,5 +1,6 @@
 <?php
 $page = "about";
+$title = "about";
 require_once($_SERVER["DOCUMENT_ROOT"]."/php/includes/config.php");
 include(ROOT_PATH.'php/includes/header.php');
 ?>
