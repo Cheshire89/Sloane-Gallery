@@ -339,6 +339,10 @@ h2.heading {
 .bodyContainer {
     width:80%;
 	height:auto;
+
+
+
+
     margin:0 auto;
 }
 @media only screen and (min-width : 641px) {
@@ -357,6 +361,9 @@ h2.heading {
         height: auto;
         margin-left:auto;
         margin-right:auto;
+        width: 78.6666%;
+        padding-left: 1.1250%;
+        padding-right: 1.1250%; 
     }
     .footer {
         clear: both;
@@ -460,12 +467,6 @@ h2.heading {
         float: left;
     }
     .menu_align {
-    }
-    .clearfix select {
-        display: none;
-    }
-    .clearfix select {
-        display: none;
     }
     .clearfix select {
         display: none;
@@ -580,6 +581,9 @@ h2.heading {
         height: auto;
     }
     .bodyContainer {
+        width: 78.6666%;
+        padding-left:0.6667%;
+        padding-right:0.6667%;
         clear: both;
         height: auto;
         margin-left:auto;
