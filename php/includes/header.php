@@ -12,6 +12,16 @@ include("config.php");
     echo $gallery;
   } 
   ?></title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-script-type" content="text/javascript">
+  <meta http-equiv="content-style-type" content="text/css">
+  <meta http-equiv="content-language" content="en">
+  <meta name="author" content="Aleksandr Antonov">
+  <meta name="keywords" content="Sloane Gallery, Art Gallery, Art, Russian, Contemporary">
+  <meta name="robots" content="index, follow">
+  <meta name="revisit-after" content="7 days">
+  <link rel="shortcut icon" href="<?php echo BASE_URL; ?>images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="<?php echo BASE_URL; ?>images/favicon.ico" type="image/x-icon">
   <link href="<?php echo BASE_URL; ?>stylesheets/reset.css" rel="stylesheet" type="text/css" />
   <link href="<?php echo BASE_URL; ?>stylesheets/normalize.css" rel="stylesheet" type="text/css" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
