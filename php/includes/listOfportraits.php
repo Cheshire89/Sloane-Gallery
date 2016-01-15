@@ -1,6 +1,6 @@
 <?php
  
- define("IMG_PATH","/images/");
+ define("IMG_PATH","images/");
 
  $listOfPortraits = array();
  $listOfPortraits[] = IMG_PATH."Ernst Neizvestny.jpg";

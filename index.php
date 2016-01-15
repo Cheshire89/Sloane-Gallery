@@ -1,9 +1,9 @@
 <?php 
 $page = "index";
 $title = "Home";
-require_once('/php/includes/config.php');
-include('/php/includes/header.php');
-include('/php/includes/listOfportraits.php');
+require_once('php/includes/config.php');
+include('php/includes/header.php');
+include('php/includes/listOfportraits.php');
 ?>
 
   <section class="body">
@@ -21,7 +21,7 @@ include('/php/includes/listOfportraits.php');
   </section>
 
 <?php
-include('/php/includes/footer.php');
+include('php/includes/footer.php');
 ?>
 
 

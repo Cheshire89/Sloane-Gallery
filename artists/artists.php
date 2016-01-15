@@ -1,7 +1,7 @@
 <?php
 $page = "artists";
 $title = "artists";
-require_once($_SERVER["DOCUMENT_ROOT"]."/php/includes/config.php");
+require_once($_SERVER["DOCUMENT_ROOT"]."/SloaneGallery/php/includes/config.php");
 include(ROOT_PATH.'php/includes/header.php');
 include('functionList.php');
 
@@ -14,7 +14,7 @@ $artists = selectQuery('select * from artists order by artist_id');
        <?php
                
         ?>
-         <a href="<?php echo $link; ?>">
+         <a>
             <img src="img/artistStart.jpg" name="targetimage">
          </a>
          <div class="caption">

@@ -5,10 +5,9 @@ $artistWorks = selectParamQuery('select * from art_works where artist = ?');
 $artistName = selectParamQuery('select * from artists where artist_id = ?');
 $artist_id = getArtistId();
 
-require_once($_SERVER["DOCUMENT_ROOT"]."/php/includes/config.php");
+require_once($_SERVER["DOCUMENT_ROOT"]."/SloaneGallery/php/includes/config.php");
 $title = $artistName[0]["artist_name"];
 include(ROOT_PATH.'php/includes/header.php');
-
 
 ?>
 <section class="body">

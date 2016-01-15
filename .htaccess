@@ -1,12 +1,16 @@
 AddType text/x-component .htc
 
-RewriteEngine On
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^sloanegalleryofart$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.sloanegalleryofart.com$
+RewriteCond %{REQUEST_URI} !SloaneGallery/
+RewriteRule (.*) /SloaneGallery/$1 [L]
 
-RewriteRule ^about/$ /about/about.php
-RewriteRule ^contact/$ /contact/contact.php
-RewriteRule ^shows/$ /shows/shows.php
-RewriteRule ^artists/$ /artists/artists.php 
-RewriteRule ^publications/$ /publications/publications.php 
+RewriteRule ^about/$ /SloaneGallery/about/about.php
+RewriteRule ^contact/$ /SloaneGallery/contact/contact.php
+RewriteRule ^shows/$ /SloaneGallery/shows/shows.php
+RewriteRule ^artists/$ /SloaneGallery/artists/artists.php 
+RewriteRule ^publications/$ /SloaneGallery/publications/publications.php 
 
 
 
