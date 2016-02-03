@@ -1,0 +1,45 @@
+body{
+	background:red;
+}
+
+.bodyContainer{
+	background-color: green;
+	min-height: 150px;
+	width: 80%;
+	margin:0 auto;
+}
+
+#imageHolder{
+	background-color: yellow;
+	min-height: 100px;
+	width: 60%;
+	float: left;
+	margin:2.5%;
+}
+
+#infoHolder{
+	background-color: tomato;
+	min-height: 100px;
+	min-height: 500px;
+	width:32.5%;
+	float:right;
+	margin:2.5% 2.5% 2.5% 0;
+}
+
+.imageBlock{
+	background-color: blue;
+	float: left;
+	min-height: 100px;
+	margin:0 0.2%;
+}
+
+#aLeft, #aRight{
+	margin-top:30%;
+	width: 10%;
+	height: 100%;
+}
+
+#img{
+	min-height: 500px;
+	min-width: 500px;
+}

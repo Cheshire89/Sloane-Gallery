@@ -12,6 +12,14 @@ include(ROOT_PATH.'php/includes/header.php');
 ?>
 <section class="body">
    <div class="bodyContainer">
+   	<div id="imageHolder">
+   		<div id="aLeft" class="imageBlock"></div>
+   		<div id="img" class="imageBlock"></div>
+   		<div id="aRight"class="imageBlock"></div>
+   	</div>
+   	<div id="infoHolder">
+   		
+   	</div>
 
    </div>
 </section>
