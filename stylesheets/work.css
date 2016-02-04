@@ -1,45 +1,54 @@
-body{
-	background:red;
+html{
+	border:1px dashed red;
 }
 
 .bodyContainer{
-	background-color: green;
 	min-height: 150px;
 	width: 80%;
 	margin:0 auto;
 }
 
 #imageHolder{
-	background-color: yellow;
-	min-height: 100px;
 	width: 60%;
 	float: left;
 	margin:2.5%;
 }
 
-#infoHolder{
-	background-color: tomato;
-	min-height: 100px;
-	min-height: 500px;
-	width:32.5%;
-	float:right;
-	margin:2.5% 2.5% 2.5% 0;
-}
-
 .imageBlock{
-	background-color: blue;
 	float: left;
-	min-height: 100px;
 	margin:0 0.2%;
 }
 
 #aLeft, #aRight{
 	margin-top:30%;
-	width: 10%;
-	height: 100%;
+	width: auto;
 }
 
 #img{
-	min-height: 500px;
-	min-width: 500px;
+	width: 77.5%;
+}
+
+#infoHolder{
+	width:32.5%;
+	float:right;
+	margin:2.5% 2.5% 2.5% 0;
+}
+
+#infoHolder ul{
+	list-style: none;
+	position: relative;
+	width: 85%;
+	margin:5%;
+	padding:0;
+	float: left;
+}
+
+#infoHolder ul li{
+	margin:1% auto;
+	padding:1%;
+	width: 100%;
+}
+
+#infoHolder ul li:hover{
+	background-color: #ccc;
 }
