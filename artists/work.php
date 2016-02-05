@@ -2,8 +2,8 @@
 $page = "work";
 include('functionList.php');
 
-$artWork = selectParamQuery('select * from art_works where work_id = ?');
 $artistId = getArtistId();
+$artWork = selectParamQuery('select * from art_works where artist = '.$artistId);
 $artistInfo = selectParamQuery('select * from artists where artist_id ='.$artistId);
 $artistName = $artistInfo[0]["artist_name"];
 $title = $artistName;
@@ -26,25 +26,30 @@ include(ROOT_PATH.'php/includes/header.php');
 ?>
 <section class="body">
    <div class="bodyContainer">
-
-   	<div id="imageHolder">
-   		<div id="aLeft" class="imageBlock">
-   			<img src="img/arrowL.png">
-   		</div>
-   		<div id="img" class="imageBlock">
-   			<img src="img/L_placeholder.jpg" alt="Placeholder">		
-   		</div>
-   		<div id="aRight"class="imageBlock">
-   			<img src="img/arrowR.png">
-   		</div>
-   	</div>
-   	<div id="infoHolder">
-   		<ul>
    		<?php
-   				echo '<li>Artist: '.$artistName.'</li>';
+   				
    			foreach ($artWork as $work){
+   			echo	 '<div class="container">
+
+					   	<div id="imageHolder">
+					   		<div id="aLeft" class="imageBlock">
+					   			<img src="img/arrowL.png">
+					   		</div>
+					   		<div id="img" class="imageBlock">
+					   			<img src="img/L_placeholder.jpg" alt="Placeholder">		
+					   		</div>
+					   		<div id="aRight"class="imageBlock">
+					   			<img src="img/arrowR.png">
+					   		</div>
+					   	</div>
+					   	<div id="infoHolder">
+			   		<ul>';
+
+
+   				echo '<li>Artist: '.$artistName.'</li>';
    				foreach ($work as $key => $value){
    					if($key != "work_id" && $key != "artist" && $value != ""){
+
    						if($key === "yearOfcreation"){
    							echo '<li> Year:  '.$value.'</li>';
    						} elseif ($key === "size"){	
@@ -55,12 +60,10 @@ include(ROOT_PATH.'php/includes/header.php');
    						}
    					}
    				}
+   			echo	'</ul></div></div>';
    			}
    		?>
-   		</ul>
-   		
-   	</div>
-
+ 
    </div>
 </section>
 <?php
