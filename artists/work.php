@@ -3,9 +3,10 @@ $page = "work";
 include('functionList.php');
 
 $artWork = selectParamQuery('select * from art_works where work_id = ?');
-$artist = getArtistId();
-$artistName = selectParamQuery('select * from artists where artist_id ='.$artist);
-$title = $artistName[0]['artist_name'];
+$artistId = getArtistId();
+$artistInfo = selectParamQuery('select * from artists where artist_id ='.$artistId);
+$artistName = $artistInfo[0]["artist_name"];
+$title = $artistName;
 $artwork = $_GET["workId"];
 
 function valueToCm($value){
@@ -40,6 +41,7 @@ include(ROOT_PATH.'php/includes/header.php');
    	<div id="infoHolder">
    		<ul>
    		<?php
+   				echo '<li>Artist: '.$artistName.'</li>';
    			foreach ($artWork as $work){
    				foreach ($work as $key => $value){
    					if($key != "work_id" && $key != "artist" && $value != ""){
