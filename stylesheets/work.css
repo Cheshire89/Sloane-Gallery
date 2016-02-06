@@ -1,4 +1,4 @@
-html{
+* {
 	border:1px dashed red;
 }
 
@@ -9,7 +9,10 @@ html{
 }
 .container{
 	width: 100%;
+	display: none;
 }
+.selected{display: block;}
+.hidden{display: none;}
 
 #imageHolder{
 	width: 60%;
@@ -29,6 +32,9 @@ html{
 
 #img{
 	width: 77.5%;
+}
+#img img{
+	width: 100%;
 }
 
 #infoHolder{
