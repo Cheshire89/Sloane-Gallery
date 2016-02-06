@@ -1,4 +1,16 @@
 <?php 
+function valueToCm($value){
+	$newValue = '';
+	$value = explode('x', $value);
+
+	for($i=0; $i<count($value);$i++){
+		$value[$i] = floatval(number_format(($value[$i] * 2.54),1));
+		$newValue .= $value[$i].' ';
+	}
+
+	return $newValue = str_replace(' ',' x ', trim($newValue)).' cm';
+}
+
 function getWorkId(){
 	if(!empty($_GET['workId'])){
 		$id = intval($_GET['workId']);
