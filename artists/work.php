@@ -7,19 +7,6 @@ $artWork = selectParamQuery('select * from art_works where artist = '.$artistId)
 $artistInfo = selectParamQuery('select * from artists where artist_id ='.$artistId);
 $artistName = $artistInfo[0]["artist_name"];
 $title = $artistName;
-$artwork = $_GET["workId"];
-
-function valueToCm($value){
-	$newValue = '';
-	$value = explode('x', $value);
-
-	for($i=0; $i<count($value);$i++){
-		$value[$i] = floatval(number_format(($value[$i] * 2.54),1));
-		$newValue .= $value[$i].' ';
-	}
-
-	return $newValue = str_replace(' ',' x ', trim($newValue)).' cm';
-}
 
 require_once($_SERVER["DOCUMENT_ROOT"]."/SloaneGallery/php/includes/config.php");
 include(ROOT_PATH.'php/includes/header.php');
@@ -30,16 +17,19 @@ include(ROOT_PATH.'php/includes/header.php');
    				
    			foreach ($artWork as $work){
    			echo	 '<div class="container">
-
-					   	<div id="imageHolder">
+						<div id="imageHolder">
 					   		<div id="aLeft" class="imageBlock">
-					   			<img src="img/arrowL.png">
+					   			<a class="prev">
+					   				<img src="img/arrowL.png">
+					   			</a>
 					   		</div>
 					   		<div id="img" class="imageBlock">
 					   			<img src="img/L_placeholder.jpg" alt="Placeholder">		
 					   		</div>
 					   		<div id="aRight"class="imageBlock">
-					   			<img src="img/arrowR.png">
+					   			<a class="next">
+					   				<img src="img/arrowR.png">
+					   			</a>	
 					   		</div>
 					   	</div>
 					   	<div id="infoHolder">
@@ -66,6 +56,51 @@ include(ROOT_PATH.'php/includes/header.php');
  
    </div>
 </section>
+<script type="text/javascript">
+
+$(document).ready(function(){
+	$('#img').focus();
+});
+
+if($(".container").length === 1){
+	$(".next, .prev").addClass("hidden");
+}
+
+
+if(!$('.container').first().hasClass('selected')){ //Set the first div to be visible
+  $('.container').first().addClass('selected');
+}
+
+var $first = $('.container:first'),
+    $last = $('.container:last');
+
+if($('.container').length === 1){
+	$(".next").addClass("hidden");
+}
+
+
+$(".next").on("click", function () {
+ 
+    var $next,
+        $selected = $(".selected");
+    // get the selected item
+    // If next  is empty , get the first
+    $next = $selected.next('.container').length ? $selected.next('.container') :$first;
+    $selected.removeClass("selected").fadeOut('slow');
+    $next.addClass('selected').fadeIn('slow');
+});
+
+$(".prev").on("click", function () {
+    var $prev,
+        $selected = $(".selected");
+    // get the selected item
+    // If prev li is empty , get the last
+    $prev = $selected.prev('.container').length ? $selected.prev('.container') : $last;
+    $selected.removeClass("selected").fadeOut('slow');
+    $prev.addClass('selected').fadeIn('slow');
+
+});
+</script>
 <?php
 include(ROOT_PATH.'php/includes/footer.php');
 ?>
