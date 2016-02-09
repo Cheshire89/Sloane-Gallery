@@ -35,12 +35,7 @@ include("config.php");
 
        echo '<style type="text/css">
           html { 
-            background: url('.BASE_URL.'images/bg'.rand(1,4).'.jpg) no-repeat center center fixed; 
-            background-color: #d6d6d6;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
+            background: url('.BASE_URL.'images/bg'.rand(1,4).'.jpg) no-repeat center center fixed;
               }
         </style>';
 
@@ -48,7 +43,13 @@ include("config.php");
   <script type="text/javascript" src="<?php echo BASE_URL; ?>scripts/browser-compatibility.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script type="text/javascript" src="<?php echo BASE_URL; ?>scripts/sticky.js"></script>
-  <script type="text/javascript" src="<?php echo BASE_URL; ?>scripts/mouse_over.js"></script>
+<?php 
+
+  if($page === "artists"){
+   echo '<script type="text/javascript" src="<?php echo BASE_URL; ?>scripts/mouse_over.js"></script>';
+  }
+
+?>
   
  </head>
  <body>
