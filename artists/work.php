@@ -3,6 +3,7 @@ $page = "work";
 include('functionList.php');
 
 $artistId = getArtistId();
+$workId = getWorkId();
 $artWork = selectParamQuery('select * from art_works where artist = '.$artistId);
 $artistInfo = selectParamQuery('select * from artists where artist_id ='.$artistId);
 $artistName = $artistInfo[0]["artist_name"];
@@ -16,7 +17,14 @@ include(ROOT_PATH.'php/includes/header.php');
    		<?php
    				
    			foreach ($artWork as $work){
-   			echo	 '<div class="container">
+
+   			echo	 '<div id="'.$work["work_id"].'" class="';
+
+                if($work["work_id"] == $workId){
+                  echo "selected "; // if work id passed in url matches the id of the contaner add class selected
+                }
+
+        echo       'container">
 						<div id="imageHolder">
 					   		<div id="aLeft" class="imageBlock">
 					   			<a class="prev">
@@ -67,9 +75,9 @@ if($(".container").length === 1){
 }
 
 
-if(!$('.container').first().hasClass('selected')){ //Set the first div to be visible
-  $('.container').first().addClass('selected');
-}
+// if(!$('.container').first().hasClass('selected')){ //Set the first div to be visible
+//   $('.container').first().addClass('selected');
+// }
 
 var $first = $('.container:first'),
     $last = $('.container:last');
