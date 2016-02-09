@@ -17,7 +17,7 @@ include(ROOT_PATH.'php/includes/header.php');
       	foreach($artistWorks as $work){
         		echo '<div class="thumbs">';
             //if(isset($work["img"])){
-              echo '<a href="work.php?workId='.$work["work_id"].'&artistId='.$artist_id.'"> 
+              echo '<a href="work.php?artistId='.$artist_id.'&workId='.$work["work_id"].'"> 
               <img src="img/placeholder.jpg" alt='.$work["title"].'/></a>';
             //}
         		if(isset($work["title"])){
