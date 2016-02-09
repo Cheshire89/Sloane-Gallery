@@ -12,6 +12,14 @@
 
 }
 
+html{
+    background-color: #d6d6d6;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .clearfix:before,
 .clearfix:after{
 	content: " ";
