@@ -2,10 +2,10 @@
 $page = "work";
 include('functionList.php');
 
-$artistId = getArtistId();
-$workId = getWorkId();
-$artWork = selectParamQuery('select * from art_works where artist = '.$artistId);
-$artistInfo = selectParamQuery('select * from artists where artist_id ='.$artistId);
+$urlArtistId = getArtistId();
+$urlWorkId = getWorkId();
+$artWorks = selectParamQuery('select * from art_works where artist = '.$urlArtistId);
+$artistInfo = selectParamQuery('select * from artists where artist_id ='.$urlArtistId);
 $artistName = $artistInfo[0]["artist_name"];
 $title = $artistName;
 
@@ -16,12 +16,13 @@ include(ROOT_PATH.'php/includes/header.php');
    <div class="bodyContainer">
    		<?php
    				
-   			foreach ($artWork as $work){
+   			foreach ($artWorks as $artWork){
 
-   			echo	 '<div id="'.$work["work_id"].'" class="';
+   			echo	 '<div id="'.$artWork["work_id"].'" class="';
 
-                if($work["work_id"] == $workId){
-                  echo "selected "; // if work id passed in url matches the id of the contaner add class selected
+                if($artWork["work_id"] == $urlWorkId){
+                  // if work id passed in url matches the id of the contaner add class selected
+                  echo "selected "; 
                 }
 
         echo       'container">
@@ -45,7 +46,7 @@ include(ROOT_PATH.'php/includes/header.php');
 
 
    				echo '<li>Artist: '.$artistName.'</li>';
-   				foreach ($work as $key => $value){
+   				foreach ($artWork as $key => $value){
    					if($key != "work_id" && $key != "artist" && $value != ""){
 
    						if($key === "yearOfcreation"){
@@ -58,7 +59,9 @@ include(ROOT_PATH.'php/includes/header.php');
    						}
    					}
    				}
-   			echo	'</ul></div></div>';
+   			echo	'</ul>
+            </div>
+          </div>';
    			}
    		?>
  
@@ -70,20 +73,12 @@ $(document).ready(function(){
 	$('#img').focus();
 });
 
-if($(".container").length === 1){
-	$(".next, .prev").addClass("hidden");
-}
-
-
-// if(!$('.container').first().hasClass('selected')){ //Set the first div to be visible
-//   $('.container').first().addClass('selected');
-// }
-
 var $first = $('.container:first'),
     $last = $('.container:last');
 
 if($('.container').length === 1){
 	$(".next").addClass("hidden");
+  $(".prev").addClass("hidden");
 }
 
 
