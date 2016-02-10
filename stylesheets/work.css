@@ -42,7 +42,7 @@
 #infoHolder ul{
 	list-style: none;
 	position: relative;
-	width: 85%;
+	width: auto;
 	margin:5%;
 	padding:0;
 	float: left;
@@ -51,9 +51,8 @@
 #infoHolder ul li{
 	margin:1% auto;
 	padding:1%;
-	width: 100%;
 }
 
 #infoHolder ul li:hover{
-	background-color: #ccc;
+	background-color: #ddd;
 }
