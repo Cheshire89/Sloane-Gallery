@@ -79,8 +79,8 @@ var $first = $('.container:first'),
 if($('.container').length === 1){
 	$(".next").addClass("hidden");
   $(".prev").addClass("hidden");
+  $("#img").css("margin-left","10%");
 }
-
 
 $(".next").on("click", function () {
  
