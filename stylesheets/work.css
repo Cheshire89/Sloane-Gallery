@@ -25,7 +25,13 @@
 	margin-top:30%;
 	width: auto;
 }
+.arrow img{
+	width: 40px;
+}
 
+.arrow img:hover{
+	cursor: pointer;
+}
 #img{
 	width: 77.5%;
 }
