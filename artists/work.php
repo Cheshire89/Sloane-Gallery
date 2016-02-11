@@ -18,14 +18,14 @@ include(ROOT_PATH.'php/includes/header.php');
    				
    			foreach ($artWorks as $artWork){
 
-   			echo	 '<div id="'.$artWork["work_id"].'" class="';
+   			echo	 '<div id="'.$artWork["work_id"].'" class="container ';
 
                 if($artWork["work_id"] == $urlWorkId){
                   // if work id passed in url matches the id of the contaner add class selected
                   echo "selected "; 
                 }
 
-        echo       'container">
+        echo       '">
 						<div id="imageHolder">
 					   		<div id="aLeft" class="imageBlock">
 					   			<a class="prev">
