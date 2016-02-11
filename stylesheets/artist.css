@@ -1,13 +1,13 @@
 .thumbHolder{
 	width:80%;
-	margin:0px auto;
+	margin:10px auto;
 }
 
 .thumbs{
 	margin:5px;
 	float: left;
 	width: 200px;
-	height: 250px;
+	height: auto;
 }
 
 .thumbs img{
@@ -16,8 +16,10 @@
 }
 
 .thumbs p{
+	width: 100%;
 	font-family: 'Arial','Helvetica','sans-serif';
-	font-size: 14px;
+	font-size: 0.9em;
 	text-align: center;
-	margin: 5px auto 3px auto;
+	margin: 7px auto 3px auto;
 }
+
