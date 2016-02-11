@@ -27,22 +27,27 @@ include(ROOT_PATH.'php/includes/header.php');
 
         echo       '">
 						<div id="imageHolder">
+
 					   		<div id="aLeft" class="imageBlock">
-					   			<a class="prev">
-					   				<img src="img/arrowL.png">
+					   			<a class="prev arrow">
+					   				<img src="img/arrow-left.png">
 					   			</a>
 					   		</div>
+
 					   		<div id="img" class="imageBlock">
 					   			<img src="img/L_placeholder.jpg" alt="Placeholder">		
 					   		</div>
+
 					   		<div id="aRight"class="imageBlock">
-					   			<a class="next">
-					   				<img src="img/arrowR.png">
+					   			<a class="next arrow">
+					   				<img src="img/arrow-right.png">
 					   			</a>	
 					   		</div>
+
 					   	</div>
+
 					   	<div id="infoHolder">
-			   		<ul>';
+			   		    <ul>';
 
 
    				echo '<li>Artist: '.$artistName.'</li>';
@@ -52,7 +57,7 @@ include(ROOT_PATH.'php/includes/header.php');
    						if($key === "yearOfcreation"){
    							echo '<li> Year:  '.$value.'</li>';
    						} elseif ($key === "size"){	
-   							echo '<li>'.ucfirst($key).':  '.$value .' in  &nbsp;&nbsp;('.valueToCm($value).')</li>';
+   							echo '<li>'.ucfirst($key).':  '.$value .' in  &nbsp;('.valueToCm($value).')</li>';
    							
    						} else {
    							echo '<li>'.ucfirst($key).':  '.$value.'</li>';
@@ -62,52 +67,18 @@ include(ROOT_PATH.'php/includes/header.php');
    			echo	'</ul>';
         
         echo  '<ul>
-              <li><a href="artist.php?artistId='.$urlArtistId.'">Return to '.$artistName.'\'s works</a></li>
+                <li><a href="artist.php?artistId='.$urlArtistId.'">
+                Return to '.$artistName.'\'s works</a></li>
               </ul>';
       
-        echo  '</div></div>';
+        echo  '</div>
+          </div>';
    			}
    		?>
  
    </div>
 </section>
-<script type="text/javascript">
-
-$(document).ready(function(){
-	$('#img').focus();
-});
-
-var $first = $('.container:first'),
-    $last = $('.container:last');
-
-if($('.container').length === 1){
-	$(".next").addClass("hidden");
-  $(".prev").addClass("hidden");
-  $("#img").css("margin-left","10%");
-}
-
-$(".next").on("click", function () {
- 
-    var $next,
-        $selected = $(".selected");
-    // get the selected item
-    // If next  is empty , get the first
-    $next = $selected.next('.container').length ? $selected.next('.container') :$first;
-    $selected.removeClass("selected").fadeOut('slow');
-    $next.addClass('selected').fadeIn('slow');
-});
-
-$(".prev").on("click", function () {
-    var $prev,
-        $selected = $(".selected");
-    // get the selected item
-    // If prev li is empty , get the last
-    $prev = $selected.prev('.container').length ? $selected.prev('.container') : $last;
-    $selected.removeClass("selected").fadeOut('slow');
-    $prev.addClass('selected').fadeIn('slow');
-
-});
-</script>
+<script type="text/javascript" src="../scripts/workPage.js"></script>
 <?php
 include(ROOT_PATH.'php/includes/footer.php');
 ?>
