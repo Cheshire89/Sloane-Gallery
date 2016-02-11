@@ -59,9 +59,13 @@ include(ROOT_PATH.'php/includes/header.php');
    						}
    					}
    				}
-   			echo	'</ul>
-            </div>
-          </div>';
+   			echo	'</ul>';
+        
+        echo  '<ul>
+              <li><a href="artist.php?artistId='.$urlArtistId.'">Return to '.$artistName.'\'s works</a></li>
+              </ul>';
+      
+        echo  '</div></div>';
    			}
    		?>
  
