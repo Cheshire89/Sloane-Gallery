@@ -21,7 +21,7 @@ include(ROOT_PATH.'php/includes/header.php');
               <img src="img/placeholder.jpg" alt='.$work["title"].'/></a>';
             //}
         		if(isset($work["title"])){
-        			echo '<p>'.$work["title"].'</p>';
+        			echo '<p>'.trimTitle($work["title"]).'</p>';
         		}
         		echo '</div>';
       	}

@@ -11,6 +11,14 @@ function valueToCm($value){
 	return $newValue = str_replace(' ',' x ', trim($newValue)).' cm';
 }
 
+function trimTitle($string){ 
+  if(strlen(trim($string)) > 30){
+    return substr($string, 0, 25).'..."';
+  } else {
+    return $string;
+  }
+}
+
 function getWorkId(){
 	if(!empty($_GET['workId'])){
 		$id = intval($_GET['workId']);
