@@ -1,0 +1,24 @@
+#slider, #info {
+	width: 80%;
+	margin: 0 auto;
+}
+.slider{
+	width: 800px;
+	height: 298px;
+	overflow: hidden;
+	background-image: url('../about/img/loading.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.slider img{
+	width: 100%;
+	display: none;
+}
+
+#info p{
+	text-indent: 20px;
+	font-family: Helvetica, Arial;
+	font-size: 1em;
+	line-height: 1.4em;
+}

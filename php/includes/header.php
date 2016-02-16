@@ -41,7 +41,8 @@ include("config.php");
 
 ?>
   <script type="text/javascript" src="<?php echo BASE_URL; ?>scripts/browser-compatibility.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
   <script type="text/javascript" src="<?php echo BASE_URL; ?>scripts/sticky.js"></script>
 <?php 
 
@@ -52,7 +53,13 @@ include("config.php");
 ?>
   
  </head>
- <body>
+ <body
+ <?php
+  if($page == "about"){
+    echo 'onload="slider();"';
+  }
+?>
+ >
   <header class="header">
    <div class="headerContainer gridContainer">
     <div class="logo logo_align">
@@ -91,4 +98,14 @@ include("config.php");
     </div>
   
    </div>
+<script type="text/javascript">
+  var slideImages = new Array();
+  slideImages[0] = new Image();
+  slideImages[0].src = "img/slide1.jpg";
+  slideImages[1] = new Image();
+  slideImages[1].src = "img/slide2.jpg";
+  slideImages[2] = new Image();
+  slideImages[2].src = "img/slide3.jpg";
+</script>
+
   </header>
