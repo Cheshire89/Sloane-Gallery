@@ -6,8 +6,8 @@ include(ROOT_PATH."php/includes/header.php");
 ?>
 <script type="text/javascript">
 	function slider(){
-		$(".slider #1").show("fade",800);
-		$(".slider #1").delay(5000).hide("fade",500);
+		$(".slider #1").show("fade",500);
+		$(".slider #1").delay(5000).hide("fade",800);
 		$(".slider").css("background-image","none");
 
 
@@ -16,7 +16,7 @@ include(ROOT_PATH."php/includes/header.php");
 
 		setInterval(function(){
 			$(".slider #"+count).show("fade",800);
-			$(".slider #"+count).delay(5000).hide("fade",500);
+			$(".slider #"+count).delay(5000).hide("fade",800);
 
 			if(count == sliderCount){
 				count=1;
@@ -25,10 +25,6 @@ include(ROOT_PATH."php/includes/header.php");
 			}
 		}, 6500);
 	}
-
-
-
-
 </script>
 <section class="body">
    <div class="bodyContainer">
