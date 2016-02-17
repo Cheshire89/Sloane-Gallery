@@ -347,12 +347,9 @@ h2.heading {
 .bodyContainer {
     width:80%;
 	height:auto;
-
-
-
-
     margin:0 auto;
 }
+
 @media only screen and (min-width : 641px) {
     .header {
         clear: both;

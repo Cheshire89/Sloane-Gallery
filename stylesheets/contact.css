@@ -1,0 +1,173 @@
+#contact-email{
+	width:45%;
+	float: left;
+	margin: 3% auto;
+}
+
+form {
+  width: 80%;
+  margin:0px auto;
+  padding-bottom: 3%;
+}
+form .field {
+  width: 100%;
+  position: relative;
+  margin-bottom: 8px;
+}
+form .field label {
+  font-family:'peignot_demiregular', sans-serif;
+  text-transform: uppercase;
+  position: absolute;
+  border-radius: 5px;
+  top: 0;
+  left: 0;
+  background: #AAA;
+  width: 125%;
+  padding: 11px 0;
+  font-size: 1.1em;
+  letter-spacing: 0.075em;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+  text-align: center;
+  color: #FFF;
+}
+
+form .field label + span {
+  font-family:Raleway, sans-serif;
+  opacity: 0;
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 2%;
+  font-size: 2.5em;
+  text-shadow: 1px 2px 0 #243B40;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+
+form .field input[type="text"],
+form .field textarea#msg {
+  border: none;
+  background: #fff;
+  width: 85%;
+  margin: 0;
+  padding: 11px 0;
+  padding-left: 40%;
+  color: #313A3D;
+  font-size: 0.95em;
+  letter-spacing: 0.05em;
+  vertical-align: top;
+}
+
+form .field input[type="text"]#msg,
+form .field textarea#msg {
+  height: 18px;
+  resize:none;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+
+form .field input[type="text"]:focus, form .field input[type="text"].focused,
+form .field textarea:focus,
+form .field textarea.focused {
+	/*outline:none;*/
+  outline-color: grey;
+}
+form .field input[type="text"]:focus#msg, form .field input[type="text"].focused#msg,
+form .field textarea:focus#msg,
+form .field textarea.focused#msg {
+  padding-bottom: 150px;
+}
+form .field input[type="text"]:focus + label, form .field input[type="text"].focused + label,
+form .field textarea:focus + label,
+form .field textarea.focused + label {
+  width: 35%;
+  background: #fcff74;
+  color: #313A3D;
+}
+form .field input[type="text"].focused + label,
+form .field textarea.focused + label {
+  /*ICON*/
+  color: #333;
+}
+form .field:hover label {
+  width: 35%;
+  background: #AAA;
+  color: #FFF;
+}
+
+form input[type="submit"] {
+  width: 50%;
+  background: #AAA;
+  border-radius: 20px;
+  border:none;
+  color: white;
+  -webkit-appearance: none;
+  text-transform: uppercase;
+  padding: 13px 30px;
+  font-size: 1em;
+  text-align: center;
+  font-family:Raleway, sans-serif;
+  font-weight: 300;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+  margin: 20px;
+  margin-left: 37%;
+  box-shadow: 0px 5px 0px 0px #243B40;
+}
+
+form input[type="submit"]:hover {
+  background: #fcff74;
+  color: #000;
+}
+form input[type="submit"]:focus {
+   transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+  outline: 0;
+}
+
+
+#general-info{
+	width: 45%;
+	float: left;
+	margin: 2% auto;
+}
+
+#general-info ul{
+	margin:1.5% auto;
+}
+
+#general-info ul li{
+	list-style: none;
+}
+
+#general-info ul li p{
+  font-family: Helvetica,Arial,sans-serif;
+  font-weight: normal;
+	text-indent: 15px;
+	line-height: 0.5em;
+}
+
+#general-info ul li h4{
+  font-family: 'peignot_demiregular',Helvetica,sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin:0.5em 0;
+}
+
+br {
+	line-height: 0.5em;
+}
