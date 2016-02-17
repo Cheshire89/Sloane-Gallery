@@ -20,10 +20,8 @@ include(ROOT_PATH."php/includes/header.php");
 						<p>Denver, CO 80202 - 1545</p>
 						<p>U.S.A</p>
 					</li><br/>
-					<li>
-						<p>Tell: +1(303)595 4230</p>
-						<p>Email: sloanegallery@hotmail.com</p>
-					</li>
+					<li><p>Tell: +1(303)595 4230</p></li>
+					<li><p>Email: sloanegallery@hotmail.com</p></li>
 				</ul>
 				<ul>
 					<li><h4>Gallery Hours:</h4></li>
@@ -31,7 +29,17 @@ include(ROOT_PATH."php/includes/header.php");
 					<li><p>and by appointment at other times  </p></li>
 	   			</ul>
 	   		</div>
-   		<div id="contact-email">
+
+	   	<div id="map-holder" class="right">
+
+	   		<div id="gallery-img" class="map-content">
+	   			<img src="../about/img/slide1.jpg" onmouseout="this.src='../about/img/slide1.jpg'" onmouseover="this.src='../about/img/slide3.jpg'" alt="Gallery Artworks">
+	   		</div>
+	   		<div id="map" class="map-content">
+	   		</div>
+	   	</div>
+
+   		<div id="contact-email" class="right">
 
 	   		<form id="contact-form" method="POST" action="">
 	   		<div class="field name-box">

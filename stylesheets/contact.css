@@ -1,12 +1,29 @@
-#contact-email{
+.map-content{
+  width: 100%;
+  margin:0 auto;
+}
+
+#gallery-img{
+  width: 100%;
+  margin:7% auto;
+}
+
+#gallery-img img{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.right{
 	width:45%;
 	float: left;
-	margin: 3% auto;
+	margin:0 auto;
+
 }
+
 
 form {
   width: 80%;
-  margin:0px auto;
+  margin:0px;
   padding-bottom: 3%;
 }
 form .field {
@@ -151,6 +168,7 @@ form input[type="submit"]:focus {
 }
 
 #general-info ul li{
+  margin-top:1.5%;
 	list-style: none;
 }
 
