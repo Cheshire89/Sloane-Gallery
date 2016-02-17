@@ -28,14 +28,14 @@ include(ROOT_PATH."php/includes/header.php");
 </script>
 <section class="body">
    <div class="bodyContainer">
-   		<div id="slider">
+   		<div id="slider-container">
    			<div class="slider">
 	   			<img id="1" src="img/slide1.jpg" alt="Collection of Gallery Images">
 	   			<img id="2" src="img/slide2.jpg" alt="Old Gallery Preview">
 	   			<img id="3" src="img/slide3.jpg" alt="Old Gallery Overview">
    			</div>
    		</div>
-   		<div id="info">
+   		<div id="info-container">
    			<p>Open since 1981, the Sloane Gallery, founded by Mina Litinsky, 
    			is located in historic district of lower downtown (LoDo) Denver, 
    			CO U.S.A. . The gallery is internationally recognized as one of 
