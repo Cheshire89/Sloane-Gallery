@@ -1,3 +1,5 @@
+
+
 AddType text/x-component .htc
 
 RewriteEngine on
@@ -11,6 +13,8 @@ RewriteRule ^contact/$ /SloaneGallery/contact/contact.php
 RewriteRule ^shows/$ /SloaneGallery/shows/shows.php
 RewriteRule ^artists/$ /SloaneGallery/artists/artists.php 
 RewriteRule ^publications/$ /SloaneGallery/publications/publications.php 
+
+
 
 
 
