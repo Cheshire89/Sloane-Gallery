@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'peignot_demiregular';
+    src: url('/fonts/peignot_demi-webfont.eot');
+    src: url('fonts/peignot_demi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/peignot_demi-webfont.woff2') format('woff2'),
+         url('fonts/peignot_demi-webfont.woff') format('woff'),
+         url('fonts/peignot_demi-webfont.ttf') format('truetype'),
+         url('fonts/peignot_demi-webfont.svg#peignot_demiregular') format('svg'),
+         url('fonts/Peignot_Demi.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .map-content{
   width: 100%;
   margin:0 auto;

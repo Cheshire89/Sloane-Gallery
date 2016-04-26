@@ -11,8 +11,10 @@
 }
 
 .thumbs img{
-	width: 200px;
-	height: 200px;
+	display: block;
+	margin: 0 auto;
+	width: 150px;
+	height: 150px;
 }
 
 .thumbs p{

@@ -12,7 +12,7 @@ function valueToCm($value){
 }
 
 function trimTitle($string){ 
-  if(strlen(trim($string)) > 30){
+  if(strlen(trim($string)) > 28){
     return substr($string, 0, 25).'..."';
   } else {
     return $string;
@@ -94,4 +94,12 @@ $artists = $results -> fetchAll(PDO::FETCH_ASSOC);
 return $artists;
 }
 
+function imageSet($element){
+	$image = $element["lImage"];
+	if($image === null || $image === ""){
+		return false;
+	}else{
+		return true;
+	}
+}
 ?>

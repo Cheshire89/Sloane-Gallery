@@ -1,23 +1,19 @@
 /*-----Start Sticky menu -------*/
 @font-face {
     font-family: 'peignot_demiregular';
-    src: url('../fonts/peignot_demi-webfont.eot');
-    src: url('../fonts/peignot_demi-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/peignot_demi-webfont.woff2') format('woff2'),
-         url('../fonts/peignot_demi-webfont.woff') format('woff'),
-         url('../fonts/peignot_demi-webfont.ttf') format('truetype'),
-         url('../fonts/peignot_demi-webfont.svg#peignot_demiregular') format('svg');
+    src: url('/fonts/peignot_demi-webfont.eot');
+    src: url('fonts/peignot_demi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/peignot_demi-webfont.woff2') format('woff2'),
+         url('fonts/peignot_demi-webfont.woff') format('woff'),
+         url('fonts/peignot_demi-webfont.ttf') format('truetype'),
+         url('fonts/peignot_demi-webfont.svg#peignot_demiregular') format('svg'),
+         url('fonts/Peignot_Demi.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
-
 }
 
 html{
-    background-color: #d6d6d6;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+
 }
 
 .clearfix:before,
@@ -265,7 +261,8 @@ img.image {
     min-width: 73px;
     color: #000000;
     height: auto;
-    font:normal normal bold 20px/19px 'peignot_demiregular';
+    font-weight:normal;
+    font-family:'peignot_demiregular';
     margin-top:0;
     margin-bottom:0;
     margin-left:auto;
@@ -275,19 +272,22 @@ img.image {
     color: #333;
 }
 .hmenubar1_list li a:active {
+    font-family: 'peignot_demiregular';
+    font-size: 1em;
     color: #5F0202;
 }
 .hmenubar1_list li a.clicked {
     color: #5F0202;
-    font-family:peignot_demiregular, sans-serif;
-    font-size:20px;
+    font-family:'peignot_demiregular', sans-serif;
+    font-size: 1em;
+    font-weight: normal;
     margin-left:0px;
     margin-right:0px;
 }
 
 .hmenubar1_list li a.active {
     color: #5F0202;
-    font-family:peignot_demiregular, sans-serif;
+    font-family:'peignot_demiregular', sans-serif;
     font-size:20px;
     margin-left:0px;
     margin-right:0px;
@@ -307,19 +307,7 @@ img.image {
     margin-left:auto;
     margin-right:auto;
 }
-h2.title {
-    font-family:'peignot demi';
-    -webkit-transform:none;
-    -webkit-box-shadow:none;
-}
-h3.heading1 {
-    font-family: peignot_demiregular, sans-serif;
-    color:#424242;
-}
-h3.heading2 {
-    font-family: peignot_demiregular, sans-serif;
-    color:#424242;
-}
+
 .hmenubar select {
     width:80%;
     padding:5px;
@@ -342,7 +330,7 @@ h2.heading {
 .body {
 	margin:0;
 	padding:0;
-	clear:both;
+    background-color: none !important;
 }
 .bodyContainer {
     width:80%;
@@ -639,6 +627,9 @@ h2.heading {
         margin-right:1%;
     }
     .hmenubar1_list li a.clicked {
+        font-family: 'peignot_demiregular';
+        font-size: 1em;
+        font-weight: normal;
         font-size: 20px;
         margin-left:0px;
         margin-right:0px;
@@ -647,6 +638,19 @@ h2.heading {
     }
 
     .hmenubar1_list li a.active {
+        font-family: 'peignot_demiregular';
+        font-size: 1em;
+        font-weight: normal;
+        font-size: 20px;
+        margin-left:0px;
+        margin-right:0px;
+        padding-left:8px;
+        padding-right:8px;
+    }
+    .hmenubar1_list li a:focus{
+        font-family: 'peignot_demiregular';
+        font-size: 1em;
+        font-weight: normal;
         font-size: 20px;
         margin-left:0px;
         margin-right:0px;

@@ -1,5 +1,0 @@
-/* GRID BASED ([{"media":"default","options":{"gutter":"0.25","columns":4,"width":"100%"}},{"media":"only screen and (min-width : 641px)","options":{"gutter":"0.25","columns":8,"width":"90%"}},{"media":"only screen and (min-width : 1024px)","options":{"gutter":"0.25","columns":12,"width":"80%","maxWidth":"1232px"}}]) */
-.hmenubar_list li {
-	float: left;
-}
-

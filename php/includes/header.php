@@ -20,6 +20,7 @@ include("config.php");
   <meta name="keywords" content="Sloane Gallery, Art Gallery, Art, Russian, Contemporary">
   <meta name="robots" content="index, follow">
   <meta name="revisit-after" content="7 days">
+  <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
   <link rel="shortcut icon" href="<?php echo BASE_URL; ?>images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="<?php echo BASE_URL; ?>images/favicon.ico" type="image/x-icon">
   <link href="<?php echo BASE_URL; ?>stylesheets/reset.css" rel="stylesheet" type="text/css" />
@@ -28,34 +29,29 @@ include("config.php");
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link href="<?php echo BASE_URL; ?>stylesheets/defult.css.css" rel="stylesheet" type="text/css" />
 <?php 
-      if($page == "index" || $page == "artists" || $page == "artist" ||$page == "shows" 
-        || $page == "contact" || $page == "about" || $page == "work"){
-        echo '<link href="'.BASE_URL.'stylesheets/'.$page.'.css" rel="stylesheet" type="text/css" />'; // index style file
-      } 
+    if($page == "index" || $page == "artists" || $page == "artist" ||$page == "shows" 
+      || $page == "contact" || $page == "about" || $page == "work"){
+      echo '<link href="'.BASE_URL.'stylesheets/'.$page.'.css" rel="stylesheet" type="text/css" />'; // index style file
+    } 
 
-       echo '<style type="text/css">
+    if($page == "work"){
+      echo '<link href="'.BASE_URL.'scripts/slick/slick-theme.css" rel="stylesheet" type="text/css" />';
+      echo '<link href="'.BASE_URL.'scripts/slick/slick.css" rel="stylesheet" type="text/css" />';
+    }
+    echo '<style type="text/css">
           html { 
-            background: url('.BASE_URL.'images/bg'.rand(1,4).'.jpg) no-repeat center center fixed;
-              }
-        </style>';
-
+            background: url('.BASE_URL.'images/bg'.rand(1,4).'.jpg) no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+          }
+          </style>';
 ?>
-  <script type="text/javascript" src="<?php echo BASE_URL; ?>scripts/browser-compatibility.js"></script>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="<?php echo BASE_URL; ?>scripts/sticky.js"></script>
-<?php 
-
-  if($page === "artists"){
-   echo '<script type="text/javascript" src="'.BASE_URL.'scripts/mouse_over.js"></script>';
-  }
-
-?>
-  
  </head>
  <body
  <?php
-  if($page == "about"){
+  if($page === "about"){
     echo 'onload="slider();"';
   }
 ?>
@@ -70,7 +66,7 @@ include("config.php");
       <nav class="clearfix">
        <ul class="hmenubar1_list">
         
-        <li <?php if ($page == "artists" || $page == "artist"){echo'class="item"';} ?>><a <?php if($page == "artists" || $page == "artist"){echo 'class="active"';} ?>href="<?php echo BASE_URL;?>artists/">Artists</a></li>
+        <li <?php if ($page == "artists" || $page == "artist" || $page == "work"){echo'class="clicked"';} ?>><a <?php if($page == "artists" || $page == "artist"){echo 'class="active"';} ?>href="<?php echo BASE_URL;?>artists/">Artists</a></li>
         <li <?php if ($page == "shows"){echo'class="item"';} ?>><a <?php if ($page == "shows"){echo'class="clicked"';} ?> href="<?php echo BASE_URL;?>shows/">Shows</a></li>
         <li <?php if ($page == "publications"){echo'class="item"';} ?>><a <?php if ($page == "publications"){echo'class="clicked"';} ?> href="<?php echo BASE_URL;?>publications/">Publications</a></li>
         <li <?php if ($page == "about"){echo'class="item"';} ?>><a <?php if ($page == "about"){echo'class="clicked"';} ?> href="<?php echo BASE_URL;?>about/">About</a></li>
@@ -94,11 +90,12 @@ include("config.php");
       <option value="#">About</option>
       <option value="#">Contact</option>
      </select>
-     <script type="text/javascript" src="<?php echo "../../"; ?>scripts/mobile_menu_selection.js"></script>
     </div>
   
    </div>
-<script type="text/javascript">
+<?php
+if($page === 'about'){
+  echo'<script type="text/javascript">
   var slideImages = new Array();
   slideImages[0] = new Image();
   slideImages[0].src = "img/slide1.jpg";
@@ -106,6 +103,7 @@ include("config.php");
   slideImages[1].src = "img/slide2.jpg";
   slideImages[2] = new Image();
   slideImages[2].src = "img/slide3.jpg";
-</script>
-
+  </script>';
+}
+?>
   </header>

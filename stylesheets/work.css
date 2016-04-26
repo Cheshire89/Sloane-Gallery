@@ -1,11 +1,10 @@
 .bodyContainer{
-	min-height: 150px;
 	width: 80%;
 	margin:0 auto;
 }
 .container{
 	width: 100%;
-	display: none;
+	display: block; /*Displays the artworks*/
 }
 .selected{display: block;}
 .hidden{display: none;}
@@ -13,30 +12,21 @@
 #imageHolder{
 	width: 60%;
 	float: left;
-	margin:2.5%;
+	margin:2.5% 0;
 }
 
 .imageBlock{
-	float: left;
 	margin:0 0.2%;
 }
 
-#aLeft, #aRight{
-	margin-top:30%;
-	width: auto;
-}
-.arrow img{
-	width: 40px;
-}
-
-.arrow img:hover{
-	cursor: pointer;
-}
 #img{
+	display: block;
 	width: 77.5%;
+	margin: 0 auto;
 }
 #img img{
-	width: 100%;
+	display: block;
+	margin: 0 auto;
 }
 
 #infoHolder{
@@ -49,7 +39,7 @@
 	list-style: none;
 	position: relative;
 	width: 90%;
-	margin:5%;
+	margin:5% 5% 5% 0;
 	padding:0;
 	float: left;
 }
@@ -72,3 +62,11 @@
     transition: all 0.2s;
 }
 
+.slick-prev:before, 
+.slick-next:before {
+    color: black !important;    
+}
+
+.slick-dots li button:before {
+	font-size: 8px !important;
+}
