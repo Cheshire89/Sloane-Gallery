@@ -6,7 +6,7 @@ include('displayLargePreview.php');
 
 $urlArtistId = getArtistId();
 $urlWorkId = getWorkId();
-$artWorks = selectParamQuery('select * from art_works where artist = '.$urlArtistId);
+$artWorks = selectParamQuery('select * from art_works where artist = '.$urlArtistId.' ORDER BY availability');
 $artistInfo = selectParamQuery('select * from artists where artist_id ='.$urlArtistId);
 $artistName = $artistInfo[0]["artist_name"];
 $title = $artistName;
@@ -35,13 +35,15 @@ var numberPattern = /\d+/g;
 artistId = query[0].match(numberPattern);
 workId = query[1].match(numberPattern);
 initialSlide = workId[0];
-$(document).ready(function(){
+$(window).load(function(){
 $('.bodyContainer').slick({
   accessibility: true,
   dots:true,
   fade:true,
   initialSlide: initialSlide,
-  infinite: false
+  infinite: false,
+  speed:300,
+  accessibility:true
 });
 });
 

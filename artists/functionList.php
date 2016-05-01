@@ -11,9 +11,9 @@ function valueToCm($value){
 	return $newValue = str_replace(' ',' x ', trim($newValue)).' cm';
 }
 
-function trimTitle($string){ 
-  if(strlen(trim($string)) > 28){
-    return substr($string, 0, 25).'..."';
+function trimTitle($string, $num){ 
+  if(strlen(trim($string)) > $num){
+    return substr($string, 0, $num-3).'..."';
   } else {
     return $string;
   }
@@ -36,6 +36,7 @@ function getArtistId(){
 		return "<h2>Artist with give id could not be found. </h2><br/>";
 	}
 }
+
 function initiateDb(){
 	try{
 	$db = new PDO('mysql:host=127.0.0.1; dbname=gallery_db','root','Sasha446');
@@ -95,7 +96,7 @@ return $artists;
 }
 
 function imageSet($element){
-	$image = $element["lImage"];
+	$image = $element["image"];
 	if($image === null || $image === ""){
 		return false;
 	}else{

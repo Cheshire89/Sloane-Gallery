@@ -36,12 +36,13 @@ html{
 	width:100% !important;
     margin-left:auto !important;
     margin-right:auto !important;
-    background-color: #FFF;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";       /* IE 8 */
-    filter: alpha(opacity=85);  /* IE 5-7 */
-    -moz-opacity: 0.85;          /* Netscape */
-    -khtml-opacity: 0.85;        /* Safari 1.x */
-    opacity: 0.85;   
+    background-color: #fdfdfd;
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";       /* IE 8 */
+/*    filter: alpha(opacity=85);  IE 5-7
+    -moz-opacity: 0.85;          Netscape
+    -khtml-opacity: 0.85;        Safari 1.x 
+    opacity: 0.85;   */
+    z-index: 1001;
  }
 
  .transparent {
@@ -579,8 +580,7 @@ h2.heading {
         padding-right:0.6667%;
         clear: both;
         height: auto;
-        margin-left:auto;
-        margin-right:auto;
+        margin:1.5% auto 3% auto;
     }
     .logo_align {
         margin-left: 0px;

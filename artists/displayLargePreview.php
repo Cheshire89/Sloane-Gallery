@@ -19,12 +19,14 @@ function displayLargeImage($element){
  echo '
     <div id="imageHolder">
         <div id="img" class="imageBlock">
-          <img src="img/Lg/'.$element["lImage"].'.jpg">   
+          <img src="img/Lg/'.$element["image"].'.jpg">   
         </div>
    </div>';
 }
 
 function displayWorkInfo($element, $name){
+  $availableLink = '<a href="'.BASE_URL.'/contact">Contact Gallery for Price | 
+                    <span class="fa fa-envelope" aria-hidden="true"></span></a>';
 
    echo'<ul>';
    echo '<li>Artist: '.$name.'</li>';
@@ -32,13 +34,13 @@ function displayWorkInfo($element, $name){
         foreach ($element as $key => $value){
           if($key != "work_id" && $key != "artist" && $value != ""){
 
-            if($key === "yearOfcreation"){
-              echo '<li> Year:  '.$value.'</li>';
-            } elseif ($key === "size"){ 
+            if ($key === "size"){ 
               echo '<li>'.ucfirst($key).':  '.$value .' in  &nbsp;('.valueToCm($value).')</li>';
-            }elseif($key === "lImage"){
+            }elseif($key === "image"){
               continue;
-            }else {
+            }elseif($key === "availability" && $value === "Available") {
+              echo '<li>'.$availableLink .' </li>';
+            }else{
               echo '<li>'.ucfirst($key).':  '.$value.'</li>';
             }
           }
@@ -50,7 +52,7 @@ function displayWorkInfo($element, $name){
 function displayReturnLink($urlArtistId, $name){
    echo  '<ul>
               <li><a href="artist.php?artistId='.$urlArtistId.'">
-              Return to '.$name.'\'s works</a></li>
+              <span class="fa fa-rotate-left" aria-hidden="true"></span> Back to '.$name.'\'s works</a></li>
           </ul>';
 }
 ?>

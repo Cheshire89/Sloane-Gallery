@@ -1,13 +1,15 @@
 <?php
 $page = "artist";
 include('functionList.php');
-$artistWorks = selectParamQuery('select * from art_works where artist = ?');
+$artistWorks = selectParamQuery('select * from art_works where artist = ? ORDER BY availability');
 $artistName = selectParamQuery('select * from artists where artist_id = ?');
 $artist_id = getArtistId();
 
 require_once($_SERVER["DOCUMENT_ROOT"]."/SloaneGallery/php/includes/config.php");
 $title = $artistName[0]["artist_name"];
 include(ROOT_PATH.'php/includes/header.php');
+
+
 
 ?>
 <section class="body">
@@ -19,10 +21,15 @@ include(ROOT_PATH.'php/includes/header.php');
               echo '<div class="thumbs">';
               //if(isset($work["img"])){
                 echo '<a href="work.php?artistId='.$artist_id.'&workId="> 
-                <img src="img/Thumb/'.$work["lImage"].'.jpg" alt='.$work["title"].'/></a>';
+                <img src="img/Thumb/'.$work["image"].'.jpg" alt='.$work["title"].'/></a>';
               //}
                 if(isset($work["title"])){
-                  echo '<p>'.trimTitle($work["title"]).'</p>';
+                  if($work["availability"] == "Available"){
+                    echo '<p>'.trimTitle($work["title"],28).'</p>';
+                  }else{
+                    echo '<p>'.trimTitle($work["title"],23).' | <i class="fa fa-circle" aria-hidden="true"></i></p>';
+                  }
+                  
                 }
                 
               echo '</div>';

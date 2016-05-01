@@ -1,9 +1,16 @@
-function changeimage(towhat,url){
-if (document.images){
-document.images.targetimage.src=towhat.src
-gotolink=url
+function changeimage(towhat, element){
+	var caption = document.getElementById('artistName');
+	var image = document.getElementById('artistPreview');
+	var url = element.href;
+	console.log(image);
+	if (document.images){
+	document.images.targetimage.src=towhat.src
+	gotolink=url
+	caption.innerText = element.innerText;
+	image.setAttribute("alt","A work by " + element.innerText);
+	}
 }
-}
+
 
 function warp(){
 window.location=gotolink
@@ -91,4 +98,5 @@ preloadimages("", "../artists/img/artist1.jpg",
 	"../artists/img/artist60.jpg",
 	"../artists/img/artist61.jpg",
 	"../artists/img/artist62.jpg",
-	"../artists/img/artist63.jpg")
+	"../artists/img/artist63.jpg",
+	"../artists/img/artist64.jpg")

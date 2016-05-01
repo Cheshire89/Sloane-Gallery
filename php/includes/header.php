@@ -20,6 +20,7 @@ include("config.php");
   <meta name="keywords" content="Sloane Gallery, Art Gallery, Art, Russian, Contemporary">
   <meta name="robots" content="index, follow">
   <meta name="revisit-after" content="7 days">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
   <link rel="shortcut icon" href="<?php echo BASE_URL; ?>images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="<?php echo BASE_URL; ?>images/favicon.ico" type="image/x-icon">
