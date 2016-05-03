@@ -29,11 +29,12 @@ include("config.php");
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link href="<?php echo BASE_URL; ?>stylesheets/defult.css.css" rel="stylesheet" type="text/css" />
-<?php 
-    if($page == "index" || $page == "artists" || $page == "artist" ||$page == "shows" 
-      || $page == "contact" || $page == "about" || $page == "work"){
-      echo '<link href="'.BASE_URL.'stylesheets/'.$page.'.css" rel="stylesheet" type="text/css" />'; // index style file
+<?php
+    $pages = ["index", "artists", "artist", "shows", "contact", "about", "work", "books"];
+   if(in_array($page, $pages)){
+    echo '<link href="'.BASE_URL.'stylesheets/'.$page.'.css" rel="stylesheet" type="text/css" />'; // index style file
     } 
+   
 
     if($page == "work"){
       echo '<link href="'.BASE_URL.'scripts/slick/slick-theme.css" rel="stylesheet" type="text/css" />';
@@ -69,7 +70,7 @@ include("config.php");
         
         <li <?php if ($page == "artists" || $page == "artist" || $page == "work"){echo'class="clicked"';} ?>><a <?php if($page == "artists" || $page == "artist"){echo 'class="active"';} ?>href="<?php echo BASE_URL;?>artists/">Artists</a></li>
         <li <?php if ($page == "shows"){echo'class="item"';} ?>><a <?php if ($page == "shows"){echo'class="clicked"';} ?> href="<?php echo BASE_URL;?>shows/">Shows</a></li>
-        <li <?php if ($page == "publications"){echo'class="item"';} ?>><a <?php if ($page == "publications"){echo'class="clicked"';} ?> href="<?php echo BASE_URL;?>publications/">Publications</a></li>
+        <li <?php if ($page == "books"){echo'class="item"';} ?>><a <?php if ($page == "books"){echo'class="clicked"';} ?> href="<?php echo BASE_URL;?>books/">Books</a></li>
         <li <?php if ($page == "about"){echo'class="item"';} ?>><a <?php if ($page == "about"){echo'class="clicked"';} ?> href="<?php echo BASE_URL;?>about/">About</a></li>
         <li <?php if ($page == "contact"){echo'class="item"';} ?>><a <?php if ($page == "contact"){echo'class="clicked"';} ?> href="<?php echo BASE_URL;?>contact/">Contact</a></li>
         

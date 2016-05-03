@@ -15,8 +15,14 @@ function trimTitle($string, $num){
   if(strlen(trim($string)) > $num){
     return substr($string, 0, $num-3).'..."';
   } else {
-    return $string;
+    return $string.str_repeat(' ', $num-strlen($string)-2).'"';
   }
+}
+
+function printAuthor($element){
+	if(isset($element["author"])){
+		return $element["author"].', ';
+	}
 }
 
 function getWorkId(){

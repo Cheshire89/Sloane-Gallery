@@ -115,14 +115,6 @@
     }
 
     .list {
-    font-family : Arial, Helvetica, sans-serif;
-    text-align : left;
-    font-size : 14px;
-    list-style-type:none;
-    width: 100%;
-    margin:0 auto 20px auto;
-    float: right;
-    overflow:hidden;
     -webkit-padding-start:0px !important;
 	  	-webkit-column-count: 4;
 	       -moz-column-count: 4;

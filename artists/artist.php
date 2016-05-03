@@ -1,11 +1,11 @@
 <?php
 $page = "artist";
-include('functionList.php');
+require_once($_SERVER["DOCUMENT_ROOT"]."/SloaneGallery/php/includes/config.php");
+include(ROOT_PATH.'php/includes/functionList.php');
 $artistWorks = selectParamQuery('select * from art_works where artist = ? ORDER BY availability');
 $artistName = selectParamQuery('select * from artists where artist_id = ?');
 $artist_id = getArtistId();
 
-require_once($_SERVER["DOCUMENT_ROOT"]."/SloaneGallery/php/includes/config.php");
 $title = $artistName[0]["artist_name"];
 include(ROOT_PATH.'php/includes/header.php');
 

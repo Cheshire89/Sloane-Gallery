@@ -12,7 +12,7 @@ RewriteRule ^about/$ /SloaneGallery/about/about.php
 RewriteRule ^contact/$ /SloaneGallery/contact/contact.php
 RewriteRule ^shows/$ /SloaneGallery/shows/shows.php
 RewriteRule ^artists/$ /SloaneGallery/artists/artists.php 
-RewriteRule ^publications/$ /SloaneGallery/publications/publications.php 
+RewriteRule ^books/$ /SloaneGallery/books/books.php 
 
 
 
