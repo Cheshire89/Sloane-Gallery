@@ -15,8 +15,8 @@ function trimTitle($string, $num){
   if(strlen(trim($string)) > $num){
     return substr($string, 0, $num-3).'..."';
   } else {
-    return $string.str_repeat(' ', $num-strlen($string)-2).'"';
-  }
+    return $string.str_repeat(' ', $num-strlen($string));
+}
 }
 
 function printAuthor($element){

@@ -27,22 +27,21 @@ function checkPrint($collection){
 <section class="body">
    <div class="bodyContainer">
     <?php
-      if(checkPrint($artistWorks)){
         echo '<div class="prints">
                 <ul>
-                  <li><a href="prints.php?artistId='.$artist_id.'" alt="'.$artistName[0]["artist_name"] .'\'s Prints">Prints</a></li>
+                  <li><a href="artist.php?artistId='.$artist_id.'">
+                  <span class="fa fa-rotate-left" aria-hidden="true"></span> Back</a></li>
                 </ul>
              </div>';
-      }
     ?>
     <!--  -->
     <div class="thumbHolder">
       <?php
-      	foreach($artistWorks as $work){
-          if(imageSet($work) && $work["category"] != 'Print'){
+        foreach($artistWorks as $work){
+          if(imageSet($work) && $work["category"] === 'Print'){
               echo '<div class="thumbs">';
               //if(isset($work["img"])){
-                echo '<a href="work.php?artistId='.$artist_id.'&workId="> 
+                echo '<a href="print.php?artistId='.$artist_id.'&workId="> 
                 <img src="img/Thumb/'.$work["image"].'.jpg" alt='.$work["title"].'/></a>';
               //}
                 if(isset($work["title"])){
@@ -57,7 +56,7 @@ function checkPrint($collection){
               echo '</div>';
 
           }
-      	}
+        }
       ?>
 
 

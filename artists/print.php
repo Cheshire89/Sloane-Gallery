@@ -18,7 +18,7 @@ include(ROOT_PATH.'php/includes/header.php');
    <div class="bodyContainer">
    		<?php
    			foreach ($artWorks as $artWork){
-          if($artWork["category"] === "Print"){
+          if($artWork["category"] !== "Print"){
             continue;
           } else{
             displayLargePreviewContainer($artWork, $artistName, $urlArtistId);

@@ -13,9 +13,11 @@ $books = selectQuery('select * from books');
 
 ?>
 <section class="body">
+   <button type="button" class="button -border checkout" name="addToCart" value="Add to Cart">Checkout &nbsp;<i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
    <div class="bodyContainer">
 
       <?php 
+      $myfile = fopen("listofBooks.txt", "w");
       foreach($books as $book){
             echo '<div class="book">
                    <div class="img">
@@ -34,17 +36,19 @@ $books = selectQuery('select * from books');
                           }
 
                          
-                          $listItem .= $value.' ';
-
+                          $listItem .= $value.', ';
                         }
         
 
-                  echo '<button type="button" class="button -border center" name="addToCart" value="Add to Cart">Add to Cart &nbsp; <i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                  echo '<li>
+                          <button type="button" class="button -border center" name="addToCart" value="Add to Cart">Add to Cart &nbsp;<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                        </li>
                       <ul>
                    </div>
                  </div>';
-                //  echo $listItem;
-                // echo "<br>";
+                 
+                 
+                 fwrite($myfile, $listItem."\n\n");
         }    
        ?>
       

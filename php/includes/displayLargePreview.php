@@ -36,7 +36,7 @@ function displayWorkInfo($element, $name){
 
             if ($key === "size"){ 
               echo '<li>'.ucfirst($key).':  '.$value .' in  &nbsp;('.valueToCm($value).')</li>';
-            }elseif($key === "image"){
+            }elseif($key === "image" || $key === "category"){
               continue;
             }elseif($key === "availability" && $value === "Available") {
               echo '<li>'.$availableLink .' </li>';

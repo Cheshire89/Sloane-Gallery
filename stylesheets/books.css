@@ -28,11 +28,15 @@
 
 .info ul li{
   width: 100%;
-  margin: 2px 0;
+  margin: 4px 0;
   font-family: 'Arial','Helvetica','sans-serif';
-  font-size: 1em;
+  font-size: 0.8em;
   list-style: none;
   display: block;
+}
+
+.info ul li p{
+  width: 100;
 }
 
 .info ul li strong{
@@ -41,14 +45,17 @@
 }
 
 .info button{
-  margin: 3% 0;
+  margin: 3%;
+  max-width: 50%;
+  display: inline-block;
 }
+
 
 .button {
   border: 0 none;
-  border-radius: 24px;
-  padding: 8px 11px;
-  margin: 10px;
+  border-radius: 18px;
+  padding: 4px 6px;
+  margin: 8px;
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
@@ -100,6 +107,17 @@
   background: #EF4836;
   border-color: #EF4836;
   color: #FFFFFF;
+}
+
+.checkout{
+    position: fixed;
+    bottom: 4%;
+    right:5%;
+    background-color:#eeeeee !important;
+}
+
+.checkout:hover{
+  background-color: #EF4836 !important;
 }
 
 
