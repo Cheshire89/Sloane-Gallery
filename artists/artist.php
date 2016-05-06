@@ -2,57 +2,35 @@
 $page = "artist";
 require_once($_SERVER["DOCUMENT_ROOT"]."/SloaneGallery/php/includes/config.php");
 include(ROOT_PATH.'php/includes/functionList.php');
-$artistWorks = selectParamQuery('select * from art_works where artist = ? ORDER BY availability');
+include(ROOT_PATH.'php/ignoreList.php');
+$artistWorks = selectParamQuery('select * from art_works where artist = ? ORDER BY availability, media');
 $artistName = selectParamQuery('select * from artists where artist_id = ?');
 $artist_id = getArtistId();
 
 $title = $artistName[0]["artist_name"];
 include(ROOT_PATH.'php/includes/header.php');
 
-function checkPrint($collection){
-    $inarray = false;
-
-    foreach($collection as $element){
-        if(in_array('Print', $element)){
-            $inarray = true;
-            break;
-        } 
-    }
-
-    return $inarray;
-}
-
-
 ?>
 <section class="body">
    <div class="bodyContainer">
-    <?php
-      if(checkPrint($artistWorks)){
-        echo '<div class="prints">
-                <ul>
-                  <li><a href="prints.php?artistId='.$artist_id.'" alt="'.$artistName[0]["artist_name"] .'\'s Prints">Prints</a></li>
-                </ul>
-             </div>';
-      }
-    ?>
-    <!--  -->
     <div class="thumbHolder">
       <?php
       	foreach($artistWorks as $work){
-          if(imageSet($work) && $work["category"] != 'Print'){
-              echo '<div class="thumbs">';
-              //if(isset($work["img"])){
-                echo '<a href="work.php?artistId='.$artist_id.'&workId="> 
-                <img src="img/Thumb/'.$work["image"].'.jpg" alt='.$work["title"].'/></a>';
-              //}
-                if(isset($work["title"])){
-                  if($work["availability"] == "Available"){
-                    echo '<p>'.trimTitle($work["title"],28).'</p>';
-                  }else{
-                    echo '<p>'.trimTitle($work["title"],23).' | <i class="fa fa-circle" aria-hidden="true"></i></p>';
-                  }
+          if(setArtWork($work) && !in_array($work["work_id"], $ignoreListArtWorks)){
+  
+                echo '<div class="thumbs">';
+                //if(isset($work["img"])){
+                  echo '<a href="work.php?artistId='.$artist_id.'&workId="> 
+                  <img src="img/Thumb/'.$work["image"].'.jpg" alt='.$work["title"].'/></a>';
+                //}
+                  if(isset($work["title"])){ 
+                    if($work["availability"] == "Available"){
+                      echo '<p>'.trimTitle($work["title"],27).'</p>';
+                    }else{
+                      echo '<p>'.trimTitle($work["title"],22).' | <i class="fa fa-circle" aria-hidden="true"></i></p>';
+                    }
                   
-                }
+        }
                 
               echo '</div>';
 
@@ -68,8 +46,7 @@ function checkPrint($collection){
 
 <?php
 include(ROOT_PATH.'php/includes/footer.php');
-?>
-<script type="text/javascript">
+?><script type="text/javascript">
   $(document).ready(function(){
     $('.thumbs a').each(function(i){
       $(this).attr('href',$(this).attr('href') + i++);

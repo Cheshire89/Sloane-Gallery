@@ -67,13 +67,26 @@ include("config.php");
      <div class="menu menu_align">
       <nav class="clearfix">
        <ul class="hmenubar1_list">
-        
-        <li <?php if ($page == "artists" || $page == "artist" || $page == "work"){echo'class="clicked"';} ?>><a <?php if($page == "artists" || $page == "artist"){echo 'class="active"';} ?>href="<?php echo BASE_URL;?>artists/">Artists</a></li>
-        <li <?php if ($page == "shows"){echo'class="item"';} ?>><a <?php if ($page == "shows"){echo'class="clicked"';} ?> href="<?php echo BASE_URL;?>shows/">Shows</a></li>
-        <li <?php if ($page == "books"){echo'class="item"';} ?>><a <?php if ($page == "books"){echo'class="clicked"';} ?> href="<?php echo BASE_URL;?>books/">Books</a></li>
-        <li <?php if ($page == "about"){echo'class="item"';} ?>><a <?php if ($page == "about"){echo'class="clicked"';} ?> href="<?php echo BASE_URL;?>about/">About</a></li>
-        <li <?php if ($page == "contact"){echo'class="item"';} ?>><a <?php if ($page == "contact"){echo'class="clicked"';} ?> href="<?php echo BASE_URL;?>contact/">Contact</a></li>
-        
+        <?php 
+            $artistPage = ["artists", "artist","work","prints","print"];
+            $booksPage = ["books"];
+            $aboutPage = ["about"];
+            $contactPage = ["contact"];
+
+            $links = array($artistPage, $booksPage, $aboutPage, $contactPage);
+            
+            for($i=0;$i<count($links);$i++){
+                    $path = BASE_URL.$links[$i][0]."/";
+                    $linkText = ucfirst($links[$i][0]);
+                    $linkHTML = '';
+                    if (in_array($page, $links[$i])){
+                      $linkHTML .= '<li class="clicked"><a class="active" href="'.$path.'">'.$linkText.'</a></li>';
+                    }else{
+                      $linkHTML .= '<li><a href="'.$path.'">'.$linkText.'</a></li>';
+                    }
+                    echo $linkHTML;
+            } 
+        ?>    
        </ul>
        <select>
         <option value="" selected="">MENU</option>

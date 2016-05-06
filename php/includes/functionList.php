@@ -25,12 +25,34 @@ function printAuthor($element){
 	}
 }
 
+function checkPrint($collection){
+    $inarray = false;
+
+    foreach($collection as $element){
+        if(in_array('Print', $element)){
+            $inarray = true;
+            break;
+        } 
+    }
+    return $inarray;
+}
+
+function setArtWork($element){
+  $setArtWork = false;
+  if(imageSet($element) && ($element["availability"] == 'Available' || $element["exception"] == true)){
+    $setArtWork = true;
+  }else{
+    $setArtWork = false;
+  }
+  return $setArtWork;
+}
+
 function getWorkId(){
 	if(!empty($_GET['workId'])){
 		$id = intval($_GET['workId']);
 		return $id;
 	}else {
-		return "<h2>Work Id could not be found </h2><br/>";
+		return "<h2>Our Appologies Work Id Could Not be Found </h2><br/>";
 	}
 }
 
@@ -39,7 +61,7 @@ function getArtistId(){
 		$artist_id = intval($_GET['artistId']);
 		return $artist_id;
 	}else{
-		return "<h2>Artist with give id could not be found. </h2><br/>";
+		return "<h2>Our Appologies Artist with Give Id Could not be Found. </h2><br/>";
 	}
 }
 
@@ -80,7 +102,7 @@ function selectParamQuery($sqlStr){
     $artist = $results -> fetchAll(PDO::FETCH_ASSOC);
     
     if($artist == FALSE){
-      echo "Sorry no artist was found with the provided Id";
+      echo "Our Appologies No Artist was Found with the Provided Id";
     }
 
 return $artist;

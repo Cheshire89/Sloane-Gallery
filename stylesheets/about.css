@@ -21,9 +21,11 @@
 	display: none;
 }
 
-#info p{
+#info-container p{
+	width: 100%;
 	text-indent: 20px;
 	font-family: Helvetica, Arial;
 	font-size: 1em;
 	line-height: 1.4em;
+	text-align: justify;
 }

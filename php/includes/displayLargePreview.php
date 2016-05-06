@@ -32,7 +32,7 @@ function displayWorkInfo($element, $name){
    echo '<li>Artist: '.$name.'</li>';
         
         foreach ($element as $key => $value){
-          if($key != "work_id" && $key != "artist" && $value != ""){
+          if($key != "work_id" && $key != "artist" && $value != "" && $key != "exception"){
 
             if ($key === "size"){ 
               echo '<li>'.ucfirst($key).':  '.$value .' in  &nbsp;('.valueToCm($value).')</li>';
@@ -41,7 +41,7 @@ function displayWorkInfo($element, $name){
             }elseif($key === "availability" && $value === "Available") {
               echo '<li>'.$availableLink .' </li>';
             }else{
-              echo '<li>'.ucfirst($key).':  '.$value.'</li>';
+              echo '<li>'.ucfirst($key).':  '.ucwords($value).'</li>';
             }
           }
         }

@@ -4,26 +4,23 @@ $subPage = "work";
 require_once($_SERVER["DOCUMENT_ROOT"]."/SloaneGallery/php/includes/config.php");
 include(ROOT_PATH.'php/includes/functionList.php');
 include(ROOT_PATH.'php/includes/displayLargePreview.php');
+include(ROOT_PATH.'php/ignoreList.php');
+include(ROOT_PATH.'php/includes/header.php');
 
 $urlArtistId = getArtistId();
 $urlWorkId = getWorkId();      
-$artWorks = selectParamQuery('select * from `art_works` where `artist`='.$urlArtistId.' ORDER BY availability');
+$artWorks = selectParamQuery('select * from `art_works` where `artist`='.$urlArtistId.' ORDER BY availability, media');
 $artistInfo = selectParamQuery('select * from artists where artist_id ='.$urlArtistId);
 $artistName = $artistInfo[0]["artist_name"];
 $title = $artistName;
-
-include(ROOT_PATH.'php/includes/header.php');
 ?>
 <section class="body">
    <div class="bodyContainer">
    		<?php
    			foreach ($artWorks as $artWork){
-          if($artWork["category"] === "Print"){
-            continue;
-          } else{
+          if(!in_array($artWork["work_id"], $ignoreListArtWorks)){
             displayLargePreviewContainer($artWork, $artistName, $urlArtistId);
-          }
-          
+          } 
    			}
    		?>
  

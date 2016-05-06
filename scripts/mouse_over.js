@@ -38,15 +38,19 @@ function preloadArray(){
 }
 
 
-preloadimages("", "../artists/img/artist1.jpg",
+preloadimages(
+	"../artists/img/artist0.jpg",
+	"../artists/img/artist1.jpg",
 	"../artists/img/artist2.jpg",
 	"../artists/img/artist3.jpg",
 	"../artists/img/artist4.jpg",
 	"../artists/img/artist5.jpg",
 	"../artists/img/artist6.jpg",
+	"../artists/img/artist7.jpg",
 	"../artists/img/artist8.jpg",
 	"../artists/img/artist9.jpg",
 	"../artists/img/artist10.jpg",
+	"../artists/img/artist11.jpg",
 	"../artists/img/artist12.jpg",
 	"../artists/img/artist13.jpg",
 	"../artists/img/artist14.jpg",
@@ -90,13 +94,5 @@ preloadimages("", "../artists/img/artist1.jpg",
 	"../artists/img/artist52.jpg",
 	"../artists/img/artist53.jpg",
 	"../artists/img/artist54.jpg",
-	"../artists/img/artist55.jpg",
-	"../artists/img/artist56.jpg",
-	"../artists/img/artist57.jpg",
-	"../artists/img/artist58.jpg",
-	"../artists/img/artist59.jpg",
-	"../artists/img/artist60.jpg",
-	"../artists/img/artist61.jpg",
-	"../artists/img/artist62.jpg",
-	"../artists/img/artist63.jpg",
-	"../artists/img/artist64.jpg")
+	"../artists/img/artist55.jpg"
+	)

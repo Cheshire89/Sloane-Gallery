@@ -10,12 +10,21 @@ include('php/includes/listOfportraits.php');
    <div class="bodyContainer" id="photos">
       
       <?php 
-          foreach($listOfPortraits as $key => $portrait){
-            $length = count($listOfPortraits);
-            $alt = substr($portrait, 8,$length-4);
-            echo '<img src="'.$portrait.'" alt="'.$alt.'"/>';
-          }
+        foreach ($artists as $artist) {
+          $container = '<div class="project">';
+          $container .= '<a href="'.$artist["link"].'" target="_blank">';
+          $container .= '<figure class="effect-chico">';
+          $container .= '<img src="'.$artist["img"].'" alt="'.$artist["title"].'">';
+          $container .= '<figcaption>
+              <h2>'.$artist["title"].'</h2>';
+          $container .= '</figcaption></figure>';
+          $container .= '</a></div>';
+          echo $container;
+        }
       ?>
+
+
+
 
    </div>
   </section>
