@@ -1,0 +1,29 @@
+{
+  "name": "sloanegallery",
+  "version": "1.0.0",
+  "description": "Website for the sloane gallery of art denver co",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cheshire89/Sloane-Gallery.git"
+  },
+  "keywords": [
+    "gallery",
+    "website",
+    "php",
+    "mysql",
+    "denver",
+    "co",
+    "aleksandr",
+    "antonov"
+  ],
+  "author": "Aleksandr Antonov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cheshire89/Sloane-Gallery/issues"
+  },
+  "homepage": "https://github.com/Cheshire89/Sloane-Gallery#readme"
+}

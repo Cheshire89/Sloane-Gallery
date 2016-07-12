@@ -1,28 +1,40 @@
 .thumbHolder{
-	width:80%;
-	margin:10px auto;
+	width: auto;
+	max-width: 80%;
+	margin:25px auto;
+}
+
+.nameHolder{
+	width: 80%;
+	margin: 0 auto;
+	border-bottom: 1px solid #000;
+}
+
+.nameHolder h1{
+	margin: 0.3em 2%;
+	font:normal normal bold 2em 'peignot_demiregular';
 }
 
 .thumbs{
-	margin:5px;
+	margin:5px 10%;
 	float: left;
-	width: 200px;
+	width: 80%;
 	height: auto;
+	display: block;
 }
 
 .thumbs img{
 	display: block;
 	margin: 0 auto;
-	width: 150px;
-	height: 150px;
+	width: 100%;
 }
 
 .thumbs p{
 	width: 100%;
 	font-family: 'Arial','Helvetica','sans-serif';
-	font-size: 0.9em;
+	font-size: 0.8em;
 	text-align: center;
-	margin: 7px auto 3px auto;
+	margin: 7px auto;
 }
 .thumbs p i{
 	color:#EF4836;
@@ -48,4 +60,24 @@
 .prints li a{
 	text-decoration: none;
 	color:black;
+}
+@media only screen and (min-width : 480px){
+	.thumbs {
+		width:45%;
+		margin: 0 2.5%;
+	}
+
+@media only screen and (min-width : 641px){
+	.thumbs {
+		width:30%;
+		margin: 0 1.666%;
+	}
+}
+
+@media only screen and (min-width : 1000px){
+	.thumbs {
+		width:20%;
+		margin: 0 2.5%;
+		min-height: 200px;
+	}
 }

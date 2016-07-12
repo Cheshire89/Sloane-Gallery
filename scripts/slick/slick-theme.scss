@@ -132,8 +132,8 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-dots {
+    margin-top: 0;
     position: absolute;
-    bottom: -45px;
     list-style: none;
     display: block;
     text-align: center;

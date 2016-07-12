@@ -1,13 +1,13 @@
 <?php 
-$gallery = "Sloane Gallery";
-include("config.php");
+$gallery = "Sloane Gallery | Russian Art";
+require_once("config.php");
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
  <head>
   <title><?php 
   if(isset($title) == TRUE){
-    echo $gallery." | ".ucfirst($title);
+    echo $gallery." - ".ucfirst($title);
   } else {
     echo $gallery;
   } 
@@ -17,22 +17,27 @@ include("config.php");
   <meta http-equiv="content-style-type" content="text/css">
   <meta http-equiv="content-language" content="en">
   <meta name="author" content="Aleksandr Antonov">
-  <meta name="keywords" content="Sloane Gallery, Art Gallery, Art, Russian, Contemporary">
+  <?php
+   echo '<meta name="keywords" content="Sloane Gallery ,Gallery , Art, Russian, Contemporary, '.$keywords.'">'
+  ?>
+  <meta name="description" content="<?php echo $description; ?>">
   <meta name="robots" content="index, follow">
   <meta name="revisit-after" content="7 days">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
   <link rel="shortcut icon" href="<?php echo BASE_URL; ?>images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="<?php echo BASE_URL; ?>images/favicon.ico" type="image/x-icon">
-  <link href="<?php echo BASE_URL; ?>stylesheets/reset.css" rel="stylesheet" type="text/css" />
-  <link href="<?php echo BASE_URL; ?>stylesheets/normalize.css" rel="stylesheet" type="text/css" />
+  <link href="<?php echo BASE_URL; ?>stylesheets/min/reset.min.css" rel="stylesheet" type="text/css" />
+  <link href="<?php echo BASE_URL; ?>stylesheets/min/normalize.min.css" rel="stylesheet" type="text/css" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link href="<?php echo BASE_URL; ?>stylesheets/defult.css.css" rel="stylesheet" type="text/css" />
+  <link href="<?php echo BASE_URL; ?>stylesheets/min/defult.min.css" rel="stylesheet" type="text/css" />
+  <!-- <link href="<?php echo BASE_URL; ?>stylesheets/defult.css" rel="stylesheet" type="text/css" /> -->
 <?php
-    $pages = ["index", "artists", "artist", "shows", "contact", "about", "work", "books"];
+   $pages = array("index", "artists", "artist", "shows", "contact", "about", "work", "books");
    if(in_array($page, $pages)){
-    echo '<link href="'.BASE_URL.'stylesheets/'.$page.'.css" rel="stylesheet" type="text/css" />'; // index style file
+    echo '<link href="'.BASE_URL.'stylesheets/min/'.$page.'.min.css" rel="stylesheet" type="text/css" />';
+    // echo '<link href="'.BASE_URL.'stylesheets/'.$page.'.css" rel="stylesheet" type="text/css" />'; // index style file
     } 
    
 
@@ -49,7 +54,29 @@ include("config.php");
             background-size: cover;
           }
           </style>';
+          
+          if($page == "contact"){
+             echo '<style>
+                  #map-contaner{
+                    position: relative;
+                    width: 80%;
+                    height: 350px;
+                    margin: 2% auto;
+                    background-color: #FFFFFF;
+                  }
+            </style>';
+   }
 ?>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-79925514-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
  </head>
  <body
  <?php
@@ -68,10 +95,10 @@ include("config.php");
       <nav class="clearfix">
        <ul class="hmenubar1_list">
         <?php 
-            $artistPage = ["artists", "artist","work","prints","print"];
-            $booksPage = ["books"];
-            $aboutPage = ["about"];
-            $contactPage = ["contact"];
+            $artistPage = array("artists", "artist","work","prints","print");
+            $booksPage = array("books");
+            $aboutPage = array("about");
+            $contactPage = array("contact");
 
             $links = array($artistPage, $booksPage, $aboutPage, $contactPage);
             
@@ -80,9 +107,9 @@ include("config.php");
                     $linkText = ucfirst($links[$i][0]);
                     $linkHTML = '';
                     if (in_array($page, $links[$i])){
-                      $linkHTML .= '<li class="clicked"><a class="active" href="'.$path.'">'.$linkText.'</a></li>';
+                      $linkHTML .= '<li class="clicked"><a class="active" hreflang="en-us" href="'.$path.'">'.$linkText.'</a></li>';
                     }else{
-                      $linkHTML .= '<li><a href="'.$path.'">'.$linkText.'</a></li>';
+                      $linkHTML .= '<li><a hreflang="en-us" href="'.$path.'">'.$linkText.'</a></li>';
                     }
                     echo $linkHTML;
             } 

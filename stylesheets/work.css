@@ -10,43 +10,44 @@
 .hidden{display: none;}
 
 #imageHolder{
-	width: 60%;
-	float: left;
-	margin:2.5% 0;
+	width: 80%;
+	margin:2.5% auto;
 }
 
 .imageBlock{
-	margin:0 0.2%;
+	width: 100%;
 }
 
 #img{
 	display: block;
-	width: 77.5%;
+	width: 100%;
 	margin: 0 auto;
 }
 #img img{
+	width: 100%;
 	display: block;
 	margin: 0 auto;
 }
 
 #infoHolder{
-	width:32.5%;
-	float:right;
-	margin:2.5% 2.5% 2.5% 0;
+	width: 100%;
+	margin:2.5% auto;
 }
 
 #infoHolder ul{
 	list-style: none;
 	position: relative;
 	width: 90%;
-	margin:5% 5% 5% 0;
-	padding:0;
+	margin:2% 0;
+	padding-left: 16%;
 	float: left;
 }
 
 #infoHolder ul li{
-	margin:1% auto;
 	padding:1%;
+	font-family: 'Arial','Helvetica', sans-serif;
+	font-size: 1em;
+	font-weight: normal;
 }
 
 #infoHolder ul li a{
@@ -70,3 +71,55 @@
 .slick-dots li button:before {
 	font-size: 8px !important;
 }
+
+@media only screen and (min-width : 640px){
+	#imageHolder{
+		width: 90%;
+		margin: 0 0 0 7%;
+	}
+	#infoHolder{
+		width: 90%;
+		margin: 0 0 0 7%;
+	}
+
+}
+
+@media only screen and (min-width : 1150px){
+	#imageHolder{
+	width: 60%;
+	float: left;
+	margin:2.5% 0;
+	}
+	#infoHolder{
+	width:32.5%;
+	float:right;
+	margin:2.5% 2.5% 2.5% 0;
+	}
+	#infoHolder ul{
+	list-style: none;
+	position: relative;
+	width: 90%;
+	margin:5% 5% 5% 0;
+	padding:0;
+	float: left;
+	}
+	#infoHolder ul li{
+	margin:1% auto;
+	padding:1%;
+	}
+
+	#img{
+	width: 77.5%;
+	margin: 0 auto;
+	}
+
+	#img img{
+	width: auto;
+	height: auto;
+	max-height: 500px;
+	max-width: 500px;
+	display: block;
+	margin: 0 auto;
+	}
+}
+

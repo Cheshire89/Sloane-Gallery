@@ -1,20 +1,25 @@
-
-
-AddType text/x-component .htc
-
+# Mod Rewrite
+Options +FollowSymLinks
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^sloanegalleryofart$ [NC,OR]
+
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php !-f
+
+RewriteCond %{HTTP_HOST} ^sloanegalleryofart.com$ [NC,OR]
 RewriteCond %{HTTP_HOST} ^www.sloanegalleryofart.com$
-RewriteCond %{REQUEST_URI} !SloaneGallery/
-RewriteRule (.*) /SloaneGallery/$1 [L]
+RewriteCond %{REQUEST_URI} !/
+RewriteRule (.*) /$1 [L]
 
-RewriteRule ^about/$ /SloaneGallery/about/about.php
-RewriteRule ^contact/$ /SloaneGallery/contact/contact.php
-RewriteRule ^shows/$ /SloaneGallery/shows/shows.php
-RewriteRule ^artists/$ /SloaneGallery/artists/artists.php 
-RewriteRule ^books/$ /SloaneGallery/books/books.php 
+RewriteRule ^about/$ /about/about.php
+RewriteRule ^contact/$ /contact/contact.php
+RewriteRule ^shows/$ /shows/shows.php
+RewriteRule ^artists/$ /artists/artists.php 
+RewriteRule ^books/$ /books/books.php 
 
-
-
+RewriteRule ^artists/([0-9a-zA-Z\_]{1,})?/?$ /artists/artist.php?artist=$1
+RewriteRule ^artists/work/([0-9a-zA-Z\_]{1,})/([0-9a-zA-Z\_])?/?$ artists/work.php?artistId=$1&workId=$2
+RewriteRule ^contact/([0-9a-zA-Z\_]{1,})?/?$ /contact/?workId=$1
 
 

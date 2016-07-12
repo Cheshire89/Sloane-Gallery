@@ -2,18 +2,25 @@ function changeimage(towhat, element){
 	var caption = document.getElementById('artistName');
 	var image = document.getElementById('artistPreview');
 	var url = element.href;
-	console.log(image);
 	if (document.images){
 	document.images.targetimage.src=towhat.src
 	gotolink=url
-	caption.innerText = element.innerText;
+	caption.innerHTML = wrapLastname(element.innerText);
 	image.setAttribute("alt","A work by " + element.innerText);
 	}
 }
 
-
-function warp(){
-window.location=gotolink
+function wrapLastname(string){
+	var newString = '';
+	string = string.split(" ");
+	for(var i=0; i<string.length; i++){
+		if(i==0){
+			newString += string[i]+" ";
+		}else{
+			newString += "<span>"+string[i]+"</span>";
+		}
+	}
+	return newString;
 }
 
 var myimages=new Array()
@@ -94,5 +101,8 @@ preloadimages(
 	"../artists/img/artist52.jpg",
 	"../artists/img/artist53.jpg",
 	"../artists/img/artist54.jpg",
-	"../artists/img/artist55.jpg"
+	"../artists/img/artist55.jpg",
+	"../artists/img/artist56.jpg",
+	"../artists/img/artist57.jpg",
+	"../artists/img/artist58.jpg"
 	)

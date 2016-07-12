@@ -1,13 +1,13 @@
 /*-----Start Sticky menu -------*/
 @font-face {
     font-family: 'peignot_demiregular';
-    src: url('/fonts/peignot_demi-webfont.eot');
-    src: url('fonts/peignot_demi-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/peignot_demi-webfont.woff2') format('woff2'),
-         url('fonts/peignot_demi-webfont.woff') format('woff'),
-         url('fonts/peignot_demi-webfont.ttf') format('truetype'),
-         url('fonts/peignot_demi-webfont.svg#peignot_demiregular') format('svg'),
-         url('fonts/Peignot_Demi.ttf') format('ttf');
+    src: url('/stylesheets/fonts/peignot_demi-webfont.eot');
+    src: url('/stylesheets/fonts/peignot_demi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/stylesheets/fonts/peignot_demi-webfont.woff2') format('woff2'),
+         url('/stylesheets/fonts/peignot_demi-webfont.woff') format('woff'),
+         url('/stylesheets/fonts/peignot_demi-webfont.ttf') format('truetype'),
+         url('/stylesheets/fonts/peignot_demi-webfont.svg#peignot_demiregular') format('svg'),
+         url('/stylesheets/fonts/Peignot_Demi.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -42,7 +42,7 @@ html{
     -moz-opacity: 0.85;          Netscape
     -khtml-opacity: 0.85;        Safari 1.x 
     opacity: 0.85;   */
-    z-index: 1001;
+    z-index: 0;
  }
 
  .transparent {
@@ -65,7 +65,6 @@ html{
 }
 .headerContainer {
     margin-top:1%;
-    margin-bottom:1%;
 }
 .mobile_menu {
     text-align: center;
@@ -127,6 +126,7 @@ html{
     padding-left:0;
     margin-right:0;
     margin-left:0;
+    z-index: 1;
 }
 .hmenubar1_list li {
     padding:0;
@@ -213,19 +213,6 @@ img.image {
     margin-top:0;
     margin-bottom:0;
 }
-.hmenubar_list li a:hover {
-    color: #333;
-}
-.hmenubar_list li a:active {
-    color: #EA2E49;
-}
-.hmenubar_list li a.clicked {
-    color: #EA2E49;
-    font-size:8px;
-}.hmenubar_list li a.active {
-    color: #EA2E49;
-    font-size:8px;
-}
 
 .clearfix {
     width:auto;
@@ -260,7 +247,7 @@ img.image {
     text-align: center;
     width: auto;
     min-width: 73px;
-    color: #000000;
+    color: #555555;
     height: auto;
     font-weight:normal;
     font-family:'peignot_demiregular';
@@ -270,18 +257,14 @@ img.image {
     margin-right:auto;
 }
 .hmenubar1_list li a:hover {
-    color: #333;
+    color: #000000;
 }
-.hmenubar1_list li a:active {
-    font-family: 'peignot_demiregular';
-    font-size: 1em;
-    color: #5F0202;
-}
+
 .hmenubar1_list li a.clicked {
     color: #5F0202;
     font-family:'peignot_demiregular', sans-serif;
-    font-size: 1em;
     font-weight: normal;
+    font-size:20px;
     margin-left:0px;
     margin-right:0px;
 }
@@ -341,6 +324,7 @@ h2.heading {
 
 @media only screen and (min-width : 641px) {
     .header {
+        position: relative;
         clear: both;
         min-height: 143px;
         width: 100%;
@@ -580,7 +564,7 @@ h2.heading {
         padding-right:0.6667%;
         clear: both;
         height: auto;
-        margin:1.5% auto 3% auto;
+        margin:0 auto 3% auto;
     }
     .logo_align {
         margin-left: 0px;

@@ -1,6 +1,6 @@
  <footer class="footer">
    <div class="footerContainer">
-    	<h2 class="heading"> Sloane Gallery of Art | 1777 Larimer St Unit 102B Denver, CO 80202 | (303)595 4230 | <?php echo "&copy;".date("Y"); ?> </h2>
+    	<h2 class="heading"> Sloane Gallery of Art | 1777 Larimer St Unit 102B Denver, CO 80202 | (303)595 4230 | <?php echo '<a itemscope itemtype="http://schema.org/Person" href="http://aleksandrantonov.com"><span itemprop="name">Aleksandr Antonov</span></a> &copy;'.date("Y"); ?> </h2>
 
    </div>
   </footer>
@@ -14,7 +14,10 @@
   if($page === "artists"){
    echo '<script type="text/javascript" src="'.BASE_URL.'scripts/mouse_over.js"></script>';
   } elseif ($page === "work") {
-   echo '<script type="text/javascript" src="'.BASE_URL.'scripts/slick/slick.min.js"></script>';
+   echo '<script type="text/javascript" src="'.BASE_URL.'node_modules/slick-carousel/slick/slick.min.js"></script>';
+   echo '<script type="text/javascript" src="'.BASE_URL.'artists/workPage.js"></script>';
+  } elseif ($page === "contact"){
+    echo '<script type="text/javascript" src="'.BASE_URL.'scripts/form-validator/jquery.form-validator.min.js"></script>';
   }
 ?>
  </body>

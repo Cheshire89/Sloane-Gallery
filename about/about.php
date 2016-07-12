@@ -2,32 +2,12 @@
 $page = "about";
 $title = "about";
 require_once("../php/includes/config.php");
+$description = "Open since 1981, Sloane Gallery,  is located in Denver, CO. The gallery is internationally recognized as major dealer in Contemporary Russian Art.";
+$keywords = $title." ,description, history, Mina, Litinsky, 1981";
 include(ROOT_PATH."php/includes/header.php");
 ?>
-<script type="text/javascript">
-	function slider(){
-		$(".slider #1").show("fade",500);
-		$(".slider #1").delay(5000).hide("fade",800);
-		$(".slider").css("background-image","none");
-
-
-		var sliderCount = $(".slider img").size();
-		var count = 2;
-
-		setInterval(function(){
-			$(".slider #"+count).show("fade",800);
-			$(".slider #"+count).delay(5000).hide("fade",800);
-
-			if(count == sliderCount){
-				count=1;
-			}else{
-				count++;
-			}
-		}, 6500);
-	}
-</script>
 <section class="body">
-   <div class="bodyContainer">
+   <div class="bodyContainer" itemscope="" itemtype="http://schema.org/AboutPage">
    		<div id="slider-container">
    			<div class="slider">
 	   			<img id="1" src="img/slide1.jpg" alt="Collection of Gallery Images">
@@ -35,7 +15,7 @@ include(ROOT_PATH."php/includes/header.php");
 	   			<img id="3" src="img/slide3.jpg" alt="Old Gallery Overview">
    			</div>
    		</div>
-   		<div id="info-container">
+   		<div id="info-container" itemprop="description">
    			<p>Open since 1981, the Sloane Gallery, founded by Mina Litinsky, 
    			is located in historic district of lower downtown (LoDo) Denver, 
    			CO U.S.A. . The gallery is internationally recognized as one of 
@@ -62,6 +42,29 @@ include(ROOT_PATH."php/includes/header.php");
    		
    </div>
 </section>
+<script type="text/javascript">
+   function slider(){
+      $(".slider #1").show("fade",500);
+      $(".slider #1").delay(5000).hide("fade",800);
+      $(".slider").css("background-image","none");
+
+
+      var sliderCount = $(".slider img").size();
+      var count = 2;
+
+      setInterval(function(){
+         $(".slider #"+count).show("fade",800);
+         $(".slider #"+count).delay(5000).hide("fade",800);
+
+         if(count == sliderCount){
+            count=1;
+         }else{
+            count++;
+         }
+      }, 6500);
+   }
+</script>
 <?php
 include(ROOT_PATH.'php/includes/footer.php');
+
 ?>
