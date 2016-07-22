@@ -16,10 +16,72 @@ RewriteRule ^about/$ /about/about.php
 RewriteRule ^contact/$ /contact/contact.php
 RewriteRule ^shows/$ /shows/shows.php
 RewriteRule ^artists/$ /artists/artists.php 
-RewriteRule ^books/$ /books/books.php 
+RewriteRule ^books/$ /books/books.php
 
 RewriteRule ^artists/([0-9a-zA-Z\_]{1,})?/?$ /artists/artist.php?artist=$1
 RewriteRule ^artists/work/([0-9a-zA-Z\_]{1,})/([0-9a-zA-Z\_])?/?$ artists/work.php?artistId=$1&workId=$2
 RewriteRule ^contact/([0-9a-zA-Z\_]{1,})?/?$ /contact/?workId=$1
+
+ErrorDocument 404 /404.php
+
+Redirect 301 /artists/artist.php?artistId=27 http://sloanegalleryofart.com/artists/Komar_Melamid
+Redirect 301 /contact.html http://sloanegalleryofart.com/contact
+Redirect 301 /exhibitions.html http://sloanegalleryofart.com/shows
+Redirect 301 /artists.html http://sloanegalleryofart.com/contact
+
+Redirect 301 /artists/tengiz_mirzashvili/tengiz_mirzashvili.html http://sloanegalleryofart.com/artists/Tengiz_Mirzashvili
+Redirect 301 /artists/vladimir_nemukhin/vladimir_nemukhin.html http://sloanegalleryofart.com/artists/Vladimir_Nemukhin
+Redirect 301 /artists/anatoly_krisochenko/anatoly_krisochenko.html http://sloanegalleryofart.com/artists/Vladimir_Nemukhin
+Redirect 301 /artists/alexander_kosolapov/alexander_kosolapov.html http://sloanegalleryofart.com/artists/Alexander_Kosolapov
+Redirect 301 /artists/roman_kriheli/krihelli_roman.html http://sloanegalleryofart.com/artists/Roman_Kriheli
+Redirect 301 /artists/alexander_isachev/alexander_isachev.html http://sloanegalleryofart.com/artists/Alexander_Isachev
+Redirect 301 /artists/komar_&_melamid/komar_&_melamid.html http://sloanegalleryofart.com/artists/Komar_Melamid
+Redirect 301 /exhibitions.html http://sloanegalleryofart.com/artists
+Redirect 301 /artists/ernst_neizvestny/ernst_neizvestny.html http://sloanegalleryofart.com/artists/Ernst_Neizvestny
+Redirect 301 /artists/oleg_tselkov/oleg_tselkov.html http://sloanegalleryofart.com/artists/Oleg_Tselkov
+Redirect 301 /artists/leonid_sokov/leonid_sokov.html http://sloanegalleryofart.com/artists/Leonid_Sokov
+Redirect 301 /artists/eugene_yelchin/eugene_yelchin.html http://sloanegalleryofart.com/artists/Yeugene_Yelchin
+Redirect 301 /artists/alexander_rapoport/alexander_rapoport.html http://sloanegalleryofart.com/artists/Alexander_Rapoport
+Redirect 301 /artists/viatcheslav_kalinin/viatcheslav_kalinin.html http://sloanegalleryofart.com/artists/Viatcheslav_Kalinin
+Redirect 301 /artists/vasily_sitnikov/vasily_sitnikov.html http://sloanegalleryofart.com/artists/Vasily_Sitnikov
+Redirect 301 /artists/igor_galanin/igor_galanin.html http://sloanegalleryofart.com/artists/Igor_Galanin
+Redirect 301 /artists/vladimir_yakovlev/vladimir_yakovlev.html http://sloanegalleryofart.com/artists/Vladimir_Yakovlev
+Redirect 301 /artists/gleb_bogomolov/gleb_bogomolov.html http://sloanegalleryofart.com/artists/Gleb_Bogomolov
+Redirect 301 /artists/avtandil/avtandil.html http://sloanegalleryofart.com/artists/Avtandil
+Redirect 301 /artists/igor_senyavin/igor_senyavin.html http://sloanegalleryofart.com/artists/Igor_Senyavin
+Redirect 301 /artists/yuri_galetsky/yuri_galetsky.html http://sloanegalleryofart.com/artists/Yuri_Galetsky
+Redirect 301 /artists/anatoly_zverev/anatoly_zverev.html http://sloanegalleryofart.com/artists/Anatoly_Zverev
+Redirect 301 /artists/nikolai_vechtomov/nikolai_vechtomov.html http://sloanegalleryofart.com/artists/Nikolai_Vechtomov
+Redirect 301 /artists/albert_shvilly/albert_shvilly.html http://sloanegalleryofart.com/artists/Albert_Shvilly
+Redirect 301 /artists/anatoly_slepyshev/anatoly_slepyshev.html http://sloanegalleryofart.com/artists/Anatoly_Slepyshev
+Redirect 301 /artists/ilya_kabakov/ilya_kabakov.html http://sloanegalleryofart.com/artists/Ilya_Kabakov
+Redirect 301 /artists/alexander_kosolapov/alexander_kosolapov.html http://sloanegalleryofart.com/artists/Alexander_Kosolapov
+Redirect 301 /artists/alexander_anufriev/alexander_anufriev.html http://sloanegalleryofart.com/artists/Alexander_Anufriev
+Redirect 301 /artists/anatoly_krisochenko/anatoly_krisochenko.html http://sloanegalleryofart.com/artists/Anatoly_Krisochenko
+Redirect 301 /artists/tengiz_mirzashvili/tengiz_mirzashvili.html http://sloanegalleryofart.com/artists/Tengiz_Mirzashvili
+Redirect 301 /artists/vladimir_nemukhin/vladimir_nemukhin.html http://sloanegalleryofart.com/artists/Vladimir_Nemukhin
+Redirect 301 /artists/alexander_isachev/alexander_isachev.html http://sloanegalleryofart.com/artists/Alexander_Isachev
+Redirect 301 /artists/oleg_vassiliev/oleg_vassiliev.html http://sloanegalleryofart.com/artists/Oleg_Vassiliev
+Redirect 301 /artists/roman_kriheli/krihelli_roman.html http://sloanegalleryofart.com/artists/Roman_Krihelli
+Redirect 301 /artists/eugene_yelchin/eugene_yelchin.html http://sloanegalleryofart.com/artists/Eugene_Yelchin
+Redirect 301 /artists/viatcheslav_kalinin/viatcheslav_kalinin.html http://sloanegalleryofart.com/artists/Viatcheslav_Kalinin
+Redirect 301 /artists/oleg_tselkov/oleg_tselkov.html http://sloanegalleryofart.com/artists/Oleg_Tselkov
+Redirect 301 /artists/leonid_sokov/leonid_sokov.html http://sloanegalleryofart.com/artists/Leonid_Sokov
+Redirect 301 /artists/vasily_sitnikov/vasily_sitnikov.html http://sloanegalleryofart.com/artists/Vasily_Sitnikov
+Redirect 301 /artists/komar_&_melamid/komar_&_melamid.html http://sloanegalleryofart.com/artists/Komar_Melamid
+Redirect 301 /artists/alexander_rapoport/alexander_rapoport.html http://sloanegalleryofart.com/artists/Alexander_Rapoport
+Redirect 301 /artists/boris_brinskih/boris_brinskih.html http://sloanegalleryofart.com/artists/Boris_Brinskih
+Redirect 301 /artists/shimon_okshtein/shimon_okshtein.html http://sloanegalleryofart.com/artists/Shimon_Okshtein
+Redirect 301 /artists/igor_galanin/igor_galanin.html http://sloanegalleryofart.com/artists/Igor_Galanin
+Redirect 301 /artists/sergei_goncharenko/sergei_goncharenko.html http://sloanegalleryofart.com/artists/Sergei_Goncharenko
+Redirect 301 /artists/vladimir_yankilevsky/vladimir_yankilevsky.html http://sloanegalleryofart.com/artists/Vladimir_Yankilevsky
+Redirect 301 /artists/yuri_galetsky/yuri_galetsky.html http://sloanegalleryofart.com/artists/Yuri_Galetsky
+Redirect 301 /artists/anatoly_zverev/anatoly_zverev.html http://sloanegalleryofart.com/artists/Anatoly_Zverev
+Redirect 301 /artists/vladimir_yakovlev/vladimir_yakovlev.html http://sloanegalleryofart.com/artists/Vladimir_Yakovlev
+Redirect 301 /artists/nikolai_vechtomov/nikolai_vechtomov.html http://sloanegalleryofart.com/artists/Nikolai_Vechtomov
+Redirect 301 /artists/vitaly_komar/vitaly%20komar.html http://sloanegalleryofart.com/artists/Vitaly_Komar
+Redirect 301 /artists/genia_chef/genia_chef.html http://sloanegalleryofart.com/artists/Genia_Chef
+Redirect 301 /artists/anatoly_slepyshev/anatoly_slepyshev.html http://sloanegalleryofart.com/artists/Anatoly_Slepyshev
+Redirect 301 /artists/marc_klionsky/marc_klionsky.html http://sloanegalleryofart.com/artists/Marc_Klionsky
 
 

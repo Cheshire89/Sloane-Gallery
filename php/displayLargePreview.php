@@ -66,15 +66,15 @@ function workInfo($element, $name){
 function returnLink($urlArtistId, $name){
 
   if($name === 'Tengiz (Tengiz Mirzashvili)'){
-    $returnLink = 'Tengiz-Mirzashvili';
+    $returnLink = 'Tengiz_Mirzashvili';
   }elseif ($name === 'Komar & Melamid') {
-    $returnLink = 'Komar-Melamid';
+    $returnLink = 'Komar_Melamid';
   }else{
-    $returnLink = str_replace(' ', '-', $name);
+    $returnLink = str_replace(' ', '_', $name);
   }
 
   $returnLinkHTML = '<ul>
-              <li><a href="artist.php?artist='.$returnLink.'">
+              <li><a href="/artists/'.$returnLink.'">
               <span class="fa fa-rotate-left" aria-hidden="true"></span> Back to '.$name.'\'s works</a></li>
           </ul>';
     return $returnLinkHTML;

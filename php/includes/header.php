@@ -22,7 +22,7 @@ require_once("config.php");
   ?>
   <meta name="description" content="<?php echo $description; ?>">
   <meta name="robots" content="index, follow">
-  <meta name="revisit-after" content="7 days">
+  <meta name="revisit-after" content="2 days">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
   <link rel="shortcut icon" href="<?php echo BASE_URL; ?>images/favicon.ico" type="image/x-icon">
@@ -34,10 +34,10 @@ require_once("config.php");
   <link href="<?php echo BASE_URL; ?>stylesheets/min/defult.min.css" rel="stylesheet" type="text/css" />
   <!-- <link href="<?php echo BASE_URL; ?>stylesheets/defult.css" rel="stylesheet" type="text/css" /> -->
 <?php
-   $pages = array("index", "artists", "artist", "shows", "contact", "about", "work", "books");
+   $pages = array("index", "artists", "artist", "shows", "contact", "about", "work", "books","404");
    if(in_array($page, $pages)){
     echo '<link href="'.BASE_URL.'stylesheets/min/'.$page.'.min.css" rel="stylesheet" type="text/css" />';
-    // echo '<link href="'.BASE_URL.'stylesheets/'.$page.'.css" rel="stylesheet" type="text/css" />'; // index style file
+    echo '<link href="'.BASE_URL.'stylesheets/'.$page.'.css" rel="stylesheet" type="text/css" />'; // index style file
     } 
    
 
